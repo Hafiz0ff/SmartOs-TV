@@ -527,6 +527,23 @@ public final class LauncherSettingsActivity extends Activity {
             });
         });
 
+        addActionRow("Обновить обои сейчас", "Проверить и загрузить свежие картины из сети", "Обновить ›", () -> {
+            Toast.makeText(this, "Проверка обновлений обоев...", Toast.LENGTH_SHORT).show();
+            WallpaperSyncManager.syncNow(this, true, new WallpaperSyncManager.SyncCallback() {
+                @Override public void onSyncStarted() {}
+                @Override public void onSyncSuccess(int count, boolean updated) {
+                    Toast.makeText(LauncherSettingsActivity.this,
+                            updated ? "Обои успешно обновлены (" + count + " шт.)!" : "У вас уже самая свежая коллекция.",
+                            Toast.LENGTH_LONG).show();
+                    markChanged();
+                    selectSection(SEC_APPEARANCE, false);
+                }
+                @Override public void onSyncError(String error) {
+                    Toast.makeText(LauncherSettingsActivity.this, "Ошибка обновления: " + error, Toast.LENGTH_LONG).show();
+                }
+            });
+        });
+
         addActionRow("Источники и лицензии", "Авторы и лицензии CC BY-SA из Wikimedia Commons", "Смотреть ›", this::showCreditsDialog);
 
         addHeader("ПРОЗРАЧНОСТЬ И ЭФФЕКТЫ");

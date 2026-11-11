@@ -1,6 +1,7 @@
 {
   "dock_apps": [
     "com.vk.tv",
+    "ru.sberdevices.startube",
     "io.gh.reisxd.tizentube.cobalt",
     "ru.iptvremote.android.iptv.pro",
     "ru.ivi.client.global",
@@ -9,7 +10,8 @@
     "org.trackertv.player"
   ],
   "app_labels": [
-    "io.gh.reisxd.tizentube.cobalt=YouTube"
+    "io.gh.reisxd.tizentube.cobalt=YouTube",
+    "ru.sberdevices.startube=YouTube"
   ],
   "columns": 6,
   "rows_below_dock": 0,

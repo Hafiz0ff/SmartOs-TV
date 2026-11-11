@@ -50,7 +50,7 @@ The setup script automatically:
 
 - **Иви (`ru.ivi.client.global`)** — штатный онлайн-кинотеатр с нативной поддержкой пульта и аппаратного декодирования.
 - **VK Видео (`com.vk.tv`)** — официальное приложение ВК Видео для ТВ, быстрое и полностью рабочее.
-- **YouTube Leanback (`io.gh.reisxd.tizentube.cobalt`)** — клиент на движке Google Cobalt, работающий без Google Play Services / microG с поддержкой личного аккаунта и Cast/DIAL.
+- **YouTube (`io.gh.reisxd.tizentube.cobalt` / `ru.sberdevices.startube` / `com.google.android.youtube.tv`)** — **Приоритет: сохранение имеющегося штатного YouTube!** Если на ТВ уже работает штатный YouTube (например, `ru.sberdevices.startube`), он сохраняется нетронутым. Cobalt (`io.gh.reisxd.tizentube.cobalt`) устанавливается только если YouTube на ТВ отсутствует.
 - **Голосовой ассистент Салют (`com.salute.star`, `ru.sberdevices.voice.*`)** — системная служба кнопки микрофона на пульте.
 - **Входы HDMI и ТВ-тюнер (`ru.sberdevices.tvinputs`, `com.mediatek.tvinput`)** — сквозные ТВ-входы.
 

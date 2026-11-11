@@ -38,6 +38,7 @@ import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.net.NetworkRequest;
 import android.net.Uri;
+import android.util.Log;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -1257,6 +1258,18 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         if (gameDay != null) gameDay.start();
         sky.update();
         wallpaperPlayer.start();
+        WallpaperSyncManager.checkAndSync(this, new WallpaperSyncManager.SyncCallback() {
+            @Override public void onSyncStarted() {}
+            @Override public void onSyncSuccess(int count, boolean updated) {
+                if (updated) {
+                    Log.i("TvHome", "Wallpapers updated via auto-sync. Reloading player...");
+                    reloadWallpaper();
+                }
+            }
+            @Override public void onSyncError(String error) {
+                Log.w("TvHome", "Auto-sync error: " + error);
+            }
+        });
         handler.postDelayed(minuteTick, MINUTE_MS);
         if (festive && lamp != null) {
             lamp.start();

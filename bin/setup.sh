@@ -99,14 +99,23 @@ echo -e "${GREEN}✓ Animation scales set to 0.5x for instant response.${NC}"
 echo -e "\n${BLUE}[4/6] Installing Essential Apps...${NC}"
 APKS_DIR="$ROOT_DIR/apks"
 if [ -d "$APKS_DIR" ]; then
-    # Download YouTube Leanback (Cobalt) if not cached
-    if [ ! -f "$APKS_DIR/YouTube-Leanback-Cobalt.apk" ]; then
-        echo -e "  Fetching ${YELLOW}YouTube Leanback (Cobalt)${NC} from GitHub..."
-        curl -sL "https://github.com/reisxd/TizenTubeCobalt/releases/download/v2.0.3/cobalt-arm.apk" -o "$APKS_DIR/YouTube-Leanback-Cobalt.apk" || true
+    # Priority: if TV already has stock YouTube (ru.sberdevices.startube, com.google.android.youtube.tv, etc.), keep it!
+    EXISTING_YT=$(adb -s "$TARGET" shell pm list packages | grep -E "ru.sberdevices.startube|com.google.android.youtube.tv|io.gh.reisxd.tizentube.cobalt" | head -n 1 | cut -d: -f2 | tr -d '\r' || true)
+    if [ -n "$EXISTING_YT" ]; then
+        echo -e "  ✓ Found active YouTube on TV: ${GREEN}$EXISTING_YT${NC} (preserved, keeping stock app)"
+    else
+        if [ ! -f "$APKS_DIR/YouTube-Leanback-Cobalt.apk" ]; then
+            echo -e "  YouTube missing on TV. Fetching ${YELLOW}YouTube Leanback (Cobalt)${NC} from GitHub..."
+            curl -sL "https://github.com/reisxd/TizenTubeCobalt/releases/download/v2.0.3/cobalt-arm.apk" -o "$APKS_DIR/YouTube-Leanback-Cobalt.apk" || true
+        fi
     fi
+
     for apk in "$APKS_DIR"/*.apk; do
         if [ -f "$apk" ]; then
             name=$(basename "$apk")
+            if [ "$name" = "YouTube-Leanback-Cobalt.apk" ] && [ -n "$EXISTING_YT" ] && [ "$EXISTING_YT" != "io.gh.reisxd.tizentube.cobalt" ]; then
+                continue # Skip overwriting native stock YouTube with Cobalt
+            fi
             echo -e "  Installing ${YELLOW}$name${NC}..."
             adb -s "$TARGET" install -r -d "$apk" >/dev/null 2>&1 || echo "  (warning: install status check)"
         fi
