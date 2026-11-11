@@ -1,0 +1,100 @@
+#EXTM3U url-tvg="http://epg.it999.ru/ru2.xml.gz,https://iptvx.one/epg/epg.xml.gz"
+
+#EXTINF:-1 group-title="Документальные" tvg-id="discovery-channel" tvg-logo="https://ngrch.github.io/iptv/logos/discovery.png", Discovery
+https://stream8.cinerama.uz/1039/index.m3u8
+#EXTINF:-1 group-title="Документальные" tvg-id="discovery-channel" tvg-logo="https://ngrch.github.io/iptv/logos/discovery.png", Discovery (2)
+http://stream.mcquack.net/177/index.m3u8
+#EXTINF:-1 group-title="Документальные", Investigation Discovery
+http://stream.mcquack.net/205/index.m3u8
+#EXTINF:-1 group-title="Документальные", RTД
+https://rt-rtd.rttv.com/live/rtdoc/playlist.m3u8
+#EXTINF:-1 group-title="Документальные", RTД (3)
+https://streaming.thestream.cyou/live/554.m3u8
+#EXTINF:-0 group-title="Документальные", Следствие вели...
+https://cdn-dvr.ntv.ru/sledstvie/tracks-v1a1/rewind-240.ts.m3u8
+#EXTINF:-1 group-title="Документальные", Неизвестная Россия
+https://cdn.ntv.ru/unknown_russia/index.m3u8
+#EXTINF:-1 group-title="Документальные", Неизвестная Россия (2)
+http://185.23.80.23:8080/NeizvestnayaRossia/index.m3u8
+#EXTINF:-1 group-title="Документальные", Открытый мир
+https://v4.proofix.ru/0mir/index.m3u8
+#EXTINF:-1 group-title="Документальные", Конгресс
+http://live-3.otcnet.ru/congresstv/index.m3u8
+#EXTINF:-1 group-title="Документальные", Конгресс (2)
+https://stitch.teletarget.ru/api/v1/hls/504/135/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Аква
+http://stitch.teletarget.ru/vintera/aquatv/index.m3u8
+#EXTINF:-1 group-title="Познавательные", ПРНК
+https://serv25.vintera.tv/1pnk/prnk/playlist.m3u8
+#EXTINF:-1 group-title="Познавательные", BRICS
+https://rusbrics.mediacdn.ru/cdn/brics/russian/playlist.m3u8
+#EXTINF:-1 group-title="Познавательные", BRICS (2)
+https://origin5.mediacdn.ru/live/brics/index.m3u8
+#EXTINF:-1 group-title="Познавательные", BRICS (3)
+http://185.23.80.23:8080/TVBRICS/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Усадьба
+https://stream8.cinerama.uz/1427/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Усадьба (2)
+http://stream.mcquack.net/211/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Загородная жизнь
+http://185.57.68.33/40/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Загородный
+https://stream8.cinerama.uz/1044/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Загородный (2)
+https://stream8.cinerama.uz/1410/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Univer (Универ)
+http://cdn.universmotri.ru/live/smil:mbr.smil/playlist.m3u8
+#EXTINF:-1 group-title="Познавательные", Univer HD (Универ)
+http://cdn.universmotri.ru/live/univer.sdp_1080p/playlist.m3u8
+#EXTINF:-1 group-title="Познавательные", Моя стихия
+http://stream.mcquack.net/141/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Viju+ Planet
+http://stream.mcquack.net/240/index.m3u8
+#EXTINF:-1 group-title="Познавательные", TV Pro
+http://rtmp.tvpro-online.ru/hls/ch1.m3u8
+#EXTINF:-1 group-title="Познавательные", RTG
+http://stream.mcquack.net/164/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Наука
+https://stream8.cinerama.uz/1248/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Наука (2)
+http://stream.mcquack.net/125/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Просвещение
+https://cdn-01.bonus-tv.ru/prosveschenie_edge/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Da Vinci
+https://stream8.cinerama.uz/1231/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Вопросы и ответы
+https://stream8.cinerama.uz/1429/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Вопросы и ответы (2)
+http://stream.mcquack.net/76/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Первый космический
+https://stream8.cinerama.uz/1415/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Nano Нано
+http://stream.mcquack.net/419/index.m3u8
+#EXTINF:-1 group-title="Познавательные", Nano Нано (2)
+http://185.23.80.23:8080/NANO_HD/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", National Geographic
+https://stream8.cinerama.uz/1041/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", National Geographic (2)
+http://stream.mcquack.net/116/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", National Geographic Wild
+https://stream8.cinerama.uz/1042/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", ZooПарк Зоопарк
+https://stream8.cinerama.uz/1417/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", Живая Планета
+https://stream8.cinerama.uz/1250/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", Живая Планета (2)
+http://stream.mcquack.net/83/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", Живая природа
+https://stream8.cinerama.uz/1411/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", Живая природа (2)
+http://stream.mcquack.net/225/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", Animal Planet
+https://stream8.cinerama.uz/1043/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", В мире животных
+https://stream8.cinerama.uz/1404/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", В мире животных (2)
+http://stream.mcquack.net/241/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", Домашние Животные
+https://stream8.cinerama.uz/1426/index.m3u8
+#EXTINF:-1 group-title="Природа и животные", Трофей
+http://stream.mcquack.net/357/index.m3u8

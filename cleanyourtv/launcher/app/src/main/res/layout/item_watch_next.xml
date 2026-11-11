@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardRoot"
+    android:layout_width="168dp"
+    android:layout_height="96dp"
+    android:layout_marginEnd="12dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:clipChildren="true"
+    android:background="@drawable/watch_next_card_bg"
+    android:foreground="@drawable/watch_next_card_foreground">
+
+    <!-- Poster / Backdrop image -->
+    <ImageView
+        android:id="@+id/cardPoster"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <!-- Gradient scrim over artwork for crystal clear text readability -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_scrim" />
+
+    <!-- Top Badge (App Name / Source) -->
+    <TextView
+        android:id="@+id/cardBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/badge_bg"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="#E6FFFFFF"
+        android:textSize="9sp"
+        android:fontFamily="@string/font_medium"
+        android:letterSpacing="0.08"
+        android:textAllCaps="true" />
+
+    <!-- Content info (Title & Subtitle) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp"
+            android:fontFamily="@string/font_medium"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/cardSub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textColor="#B3FFFFFF"
+            android:textSize="10sp"
+            android:fontFamily="@string/font_regular"
+            android:singleLine="true"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- Bottom Progress Bar -->
+    <ProgressBar
+        android:id="@+id/cardProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="bottom"
+        android:progressDrawable="@drawable/watch_next_progress"
+        android:max="100" />
+</FrameLayout>

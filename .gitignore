@@ -1,0 +1,42 @@
+# ==============================================================================
+# SmartOs-TV - Git Ignore Rules
+# Strictly excludes all personal device dumps, credentials, and build caches
+# ==============================================================================
+
+# 1. Device-specific dumps and personal TV artifacts
+backup/
+.audit/
+screenshots/
+shots/
+work/
+traces/
+bench-results/
+
+# 2. Android Build Artifacts & Gradle
+**/build/
+**/.gradle/
+**/local.properties
+**/.idea/
+**/*.iml
+**/*.log
+launcher/hs_err_pid*.log
+launcher/replay_pid*.log
+
+# 3. Python Virtualenvs & Caches
+**/__pycache__/
+**/*.pyc
+cleanyourtv/tools/venv/
+cleanyourtv/tools/adbkey/
+
+# 4. OS & Editor Metadata
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# 5. Secrets and credentials
+*.key
+*.pem
+*.token
+*.env
+*.env.local

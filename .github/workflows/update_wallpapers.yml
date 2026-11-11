@@ -1,0 +1,40 @@
+name: Update Curated Wallpapers
+
+on:
+  schedule:
+    # Run every Sunday at 04:00 UTC
+    - cron: '0 4 * * 0'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-wallpapers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch curated landscape wallpapers from Wikimedia Commons
+        run: |
+          python3 tools/fetch_wikimedia_wallpapers.py
+
+      - name: Commit and push updated wallpapers
+        run: |
+          git config user.name "SmartOs Bot"
+          git config user.email "bot@smartos-tv.internal"
+          git add wallpapers/
+          if git diff --cached --quiet; then
+            echo "No changes in wallpapers collection."
+          else
+            git commit -m "chore(wallpapers): auto-update Wikimedia Commons collection [skip ci]"
+            git push
+          fi

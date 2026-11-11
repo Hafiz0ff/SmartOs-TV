@@ -1,0 +1,28 @@
+{
+  "credits": [
+    {
+      "file": "001.jpg",
+      "title": "Misty karst valley at sunrise, Laos",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Misty_karst_valley_at_sunrise_in_Laos.jpg"
+    },
+    {
+      "file": "002.jpg",
+      "title": "Autumn reflections, Loch Tummel, Scotland",
+      "author": "Eric Kilby",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Loch_Tummel_autumn_reflections.jpg"
+    },
+    {
+      "file": "003.jpg",
+      "title": "Morning mist at Tham Sakoen, Thailand",
+      "author": "BerryJ",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tham_Sakoen_National_Park_morning_mist.jpg"
+    }
+  ]
+}

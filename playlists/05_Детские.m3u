@@ -1,0 +1,90 @@
+#EXTM3U url-tvg="http://epg.it999.ru/ru2.xml.gz,https://iptvx.one/epg/epg.xml.gz"
+
+#EXTINF:-1 group-title="Детские" tvg-id="2na2" tvg-logo="https://ngrch.github.io/iptv/logos/2x2.png", 2x2
+https://zabava-htlive.cdn.ngenix.net/hls/CH_2X2/variant.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="2na2" tvg-logo="https://ngrch.github.io/iptv/logos/2x2.png", 2x2 (2)
+https://bl.rutube.ru/livestream/392b4686b770bae2da6bf5ac4574add5/index.m3u8?e=2068731801&s=tenr-yHXUv1wibfka78s2A&scheme=https
+#EXTINF:-1 group-title="Детские" tvg-id="2na2" tvg-logo="https://ngrch.github.io/iptv/logos/2x2.png", 2x2 (3)
+http://185.23.80.23:8080/2x2/index.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="solnce" tvg-logo="https://ngrch.github.io/iptv/logos/solnce.png", Солнце
+https://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY/variant.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="solnce" tvg-logo="https://ngrch.github.io/iptv/logos/solnce.png", Солнце (2)
+https://tv.mediacdn.ru/live/solntse/playlist.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="mult" tvg-logo="https://ngrch.github.io/iptv/logos/mult.png", Мульт
+https://stream8.cinerama.uz/1246/index.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="2na2-pl2" tvg-logo="https://ngrch.github.io/iptv/logos/2x2.png", 2x2 +2
+https://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_2/variant.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="2na2-pl4" tvg-logo="https://ngrch.github.io/iptv/logos/2x2.png", 2x2 +4
+https://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_4/variant.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="2na2-pl7" tvg-logo="https://ngrch.github.io/iptv/logos/2x2.png", 2x2 +7
+https://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_7/variant.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="solnce-pl2" tvg-logo="https://ngrch.github.io/iptv/logos/solnce.png", Солнце +2
+https://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_2/variant.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="solnce-pl4" tvg-logo="https://ngrch.github.io/iptv/logos/solnce.png", Солнце +4
+https://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_4/variant.m3u8
+#EXTINF:-1 group-title="Детские" tvg-id="solnce-pl7" tvg-logo="https://ngrch.github.io/iptv/logos/solnce.png", Солнце +7
+https://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_7/variant.m3u8
+#EXTINF:-1 group-title="Детские", Маша и Медведь
+https://lbgo.bozztv.com/07/ushba79/index.m3u8
+#EXTINF:-1 group-title="Детские", Мультфильмы
+https://lbgo.bozztv.com/07/ushba80/index.m3u8
+#EXTINF:-1 group-title="Детские", СТС Kids (2)
+http://stream.mcquack.net/197/index.m3u8
+#EXTINF:-1 group-title="Детские", Fan
+http://stream.mcquack.net/420/index.m3u8
+#EXTINF:-1 group-title="Детские", Мама
+https://stream8.cinerama.uz/1244/index.m3u8
+#EXTINF:-1 group-title="Детские", Мама (2)
+http://stream.mcquack.net/79/index.m3u8
+#EXTINF:-1 group-title="Детские", Ducktv
+https://stream8.cinerama.uz/1271/index.m3u8
+#EXTINF:-1 group-title="Детские", Ducktv (2)
+https://d6lk10bkdgfae.cloudfront.net/playlist.m3u8
+#EXTINF:-1 group-title="Детские", NickToons
+https://stream8.cinerama.uz/1502/index.m3u8
+#EXTINF:-1 group-title="Детские", Nickelodeon
+https://stream8.cinerama.uz/1500/index.m3u8
+#EXTINF:-1 group-title="Детские", Nickelodeon (2)
+http://stream.mcquack.net/443/index.m3u8
+#EXTINF:-1 group-title="Детские", Nick Jr.
+http://stream.mcquack.net/220/index.m3u8
+#EXTINF:-1 group-title="Детские", Смайл
+https://stream8.cinerama.uz/1425/index.m3u8
+#EXTINF:-1 group-title="Детские", Смайл (2)
+https://5d23269b3ec0c.streamlock.net/WEB_Smilik/Smilik.stream/index.m3u8
+#EXTINF:-1 group-title="Детские", Cartoon Network
+https://bl.rutube.ru/livestream/d2119cfb95146b3983cf05c1fe35e66f/index.m3u8?s=SBAsUrxODR6nk6ktHKTpoQ&e=2090795468&scheme=https
+#EXTINF:-1 group-title="Детские", Cartoon Classics
+http://5.188.159.128:8070/Cartoon_Network/index.m3u8
+#EXTINF:-1 group-title="Детские", Шаян
+http://s45177.cdn.ngenix.net/hls/CH_R03_SHAYNTV/variant.m3u8
+#EXTINF:-1 group-title="Детские", Чип и Дейл
+http://194.26.229.213/chip-n-dale-rescue-rangers/index.m3u8
+#EXTINF:-1 group-title="Детские", Мультиландия
+https://stream8.cinerama.uz/1440/index.m3u8
+#EXTINF:-1 group-title="Детские", NikNik
+https://hostrec.ru/live/wic2AtEFCLwsZcUkAgtZcjlYgjc.m3u8
+#EXTINF:-1 group-title="Детские", Рыжий
+https://stream8.cinerama.uz/1407/index.m3u8
+#EXTINF:-1 group-title="Детские", О!
+http://stream.mcquack.net/60/index.m3u8
+#EXTINF:-1 group-title="Детские", Союзмультфильмы
+http://194.26.229.213/souzmultfilm/index.m3u8
+#EXTINF:-1 group-title="Детские", Тооку
+http://live-saha.cdnvideo.ru/saha/tooky/playlist.m3u8
+#EXTINF:-1 group-title="Детские", Уникум
+https://stream8.cinerama.uz/1033/index.m3u8
+#EXTINF:-1 group-title="Детские", В гостях у сказки
+https://stream8.cinerama.uz/1270/index.m3u8
+#EXTINF:-1 group-title="Детские", Tiji
+https://stream8.cinerama.uz/1441/index.m3u8
+#EXTINF:-1 group-title="Детские", Tiji (2)
+http://stream.mcquack.net/111/index.m3u8
+#EXTINF:-1 group-title="Детские", Gulli Girl
+https://stream8.cinerama.uz/1445/index.m3u8
+#EXTINF:-1 group-title="Детские", Gulli Girl (2)
+http://stream.mcquack.net/305/index.m3u8
+#EXTINF:-1 group-title="Детские", Капитан Фантастика
+https://stream8.cinerama.uz/1406/index.m3u8
+#EXTINF:-1 group-title="Детские", Капитан Фантастика (2)
+http://stream.mcquack.net/144/index.m3u8

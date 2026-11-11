@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "generation": 1,
+  "updated_at": "2026-11-11T18:00:00Z",
+  "base_url": "https://raw.githubusercontent.com/Hafiz0ff/SmartOs-TV/main/wallpapers/",
+  "images": [
+    {
+      "file": "001.jpg",
+      "url": "https://raw.githubusercontent.com/Hafiz0ff/SmartOs-TV/main/wallpapers/001.jpg",
+      "sha256": "5edbd012fecb9d3d922d8463a63c66e6da0f034746dde6a21a1238c53f472b51",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 268288,
+      "title": "Misty karst valley at sunrise, Laos",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Misty_karst_valley_at_sunrise_in_Laos.jpg"
+    },
+    {
+      "file": "002.jpg",
+      "url": "https://raw.githubusercontent.com/Hafiz0ff/SmartOs-TV/main/wallpapers/002.jpg",
+      "sha256": "058815ad8f73b4bda67c9d34bc0f0a40382659ea80ceb35349f6a307ec9f9e63",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 306176,
+      "title": "Autumn reflections, Loch Tummel, Scotland",
+      "author": "Eric Kilby",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Loch_Tummel_autumn_reflections.jpg"
+    },
+    {
+      "file": "003.jpg",
+      "url": "https://raw.githubusercontent.com/Hafiz0ff/SmartOs-TV/main/wallpapers/003.jpg",
+      "sha256": "bbfafc6c9a64acc63ec85268e93a42f01d3751300f7b77dd1671cefa4ae9bae1",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 285696,
+      "title": "Morning mist at Tham Sakoen, Thailand",
+      "author": "BerryJ",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tham_Sakoen_National_Park_morning_mist.jpg"
+    }
+  ]
+}
