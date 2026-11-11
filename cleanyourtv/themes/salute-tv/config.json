@@ -1,11 +1,15 @@
 {
   "dock_apps": [
     "com.vk.tv",
-    "com.raccoon.hdrezkav2",
+    "io.gh.reisxd.tizentube.cobalt",
     "ru.iptvremote.android.iptv.pro",
     "ru.ivi.client.global",
-    "ru.rutube.app",
-    "org.smarttube.stable"
+    "com.raccoon.hdrezkav2",
+    "mobi.zona",
+    "org.trackertv.player"
+  ],
+  "app_labels": [
+    "io.gh.reisxd.tizentube.cobalt=YouTube"
   ],
   "columns": 6,
   "rows_below_dock": 0,

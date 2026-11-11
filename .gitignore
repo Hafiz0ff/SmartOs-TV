@@ -40,3 +40,6 @@ Thumbs.db
 *.token
 *.env
 *.env.local
+
+# 6. Large auto-fetched APKs (>50MB)
+apks/YouTube-Leanback-Cobalt.apk
