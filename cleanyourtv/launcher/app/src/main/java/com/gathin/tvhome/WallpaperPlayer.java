@@ -34,9 +34,9 @@ final class WallpaperPlayer {
     private final FrameLayout root;
     private final ImageView image;
     private final int backgroundColor;
-    private final List<File> files;
-    private final long interval;
-    private final String order;
+    private final List<File> files = new ArrayList<>();
+    private long interval;
+    private String order;
     private final SharedPreferences preferences;
     private final ExecutorService decoder = Executors.newSingleThreadExecutor();
     private final Random random = new Random();
@@ -53,10 +53,10 @@ final class WallpaperPlayer {
     private boolean loading;
     private String displayed = "";
     /** wallpaper_captions: the shown picture's name from wallpapers/captions.txt; null when off or there are none. */
-    private final TextView caption;
-    private final Map<String, String> names;
+    private TextView caption;
+    private final Map<String, String> names = new java.util.HashMap<>();
     /** wallpaper_moods: the collection's groups by time of day; empty rotates through all of it. */
-    private final Map<String, Set<String>> moods;
+    private Map<String, Set<String>> moods;
     /** config.xml latitude and longitude for the sun's times, and today's {sunrise, sunset} once worked out. */
     private final String latitude, longitude;
     private LocalDate sunDay;
@@ -65,7 +65,7 @@ final class WallpaperPlayer {
     WallpaperPlayer(Context context, FrameLayout root, Config config) {
         this.root = root;
         backgroundColor = config.backgroundColor;
-        files = new ArrayList<>(config.wallpapers);
+        files.addAll(config.wallpapers);
         interval = config.wallpaperRotationMinutes * 60_000L;
         bitmapConfig = config.wallpaperTrueColor ? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565;
         // The dim is painted into the picture (decode), so no full-screen shade layer is drawn on every frame.
@@ -88,8 +88,9 @@ final class WallpaperPlayer {
         image = new ImageView(context);
         image.setScaleType(ImageView.ScaleType.CENTER_CROP);
         image.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
-        names = config.wallpaperCaptions && config.wallpaperEnabled && !files.isEmpty()
-                ? WallpaperCaptions.read(files.get(0).getParentFile()) : Collections.emptyMap();
+        if (config.wallpaperCaptions && config.wallpaperEnabled && !files.isEmpty()) {
+            names.putAll(WallpaperCaptions.read(files.get(0).getParentFile()));
+        }
         caption = names.isEmpty() ? null : makeCaption(context, root);
         if (config.wallpaperEnabled && !files.isEmpty()) {
             root.addView(image, 0, new FrameLayout.LayoutParams(
@@ -163,6 +164,60 @@ final class WallpaperPlayer {
         active = false;
         closed = true;
         decoder.shutdownNow();
+    }
+
+    /**
+     * Reloads collection, captions, and playback settings dynamically on the UI thread.
+     * If the current image is still part of the new collection, it remains visible without flickering.
+     */
+    void reload(Context context, Config newConfig) {
+        if (closed) return;
+        files.clear();
+        files.addAll(newConfig.wallpapers);
+        interval = newConfig.wallpaperRotationMinutes * 60_000L;
+        order = newConfig.wallpaperOrder;
+        moods = newConfig.wallpaperMoods;
+
+        names.clear();
+        if (newConfig.wallpaperCaptions && newConfig.wallpaperEnabled && !files.isEmpty()) {
+            names.putAll(WallpaperCaptions.read(files.get(0).getParentFile()));
+        }
+
+        if (caption == null && !names.isEmpty()) {
+            caption = makeCaption(context, root);
+        } else if (caption != null && names.isEmpty()) {
+            caption.setVisibility(View.GONE);
+        }
+
+        String collection = collectionKey(files);
+        if (!collection.equals(preferences.getString("collection", ""))) {
+            preferences.edit().putString("collection", collection).apply();
+        }
+
+        if (!newConfig.wallpaperEnabled || files.isEmpty()) {
+            if (image.getParent() != null) root.removeView(image);
+            if (caption != null) caption.setVisibility(View.GONE);
+            root.setBackgroundColor(backgroundColor);
+            if (current != null) {
+                current.recycle();
+                current = null;
+            }
+            displayed = "";
+            return;
+        }
+
+        if (image.getParent() == null) {
+            root.addView(image, 0, new FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        }
+
+        List<File> playable = playable();
+        File stillPresent = WallpaperRotation.find(playable, displayed);
+        if (stillPresent != null && current != null) {
+            showCaption(true);
+        } else {
+            showFirst();
+        }
     }
 
     void update() {

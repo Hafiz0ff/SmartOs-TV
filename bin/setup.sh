@@ -55,7 +55,15 @@ fi
 MODEL=$(adb -s "$TARGET" shell getprop ro.product.model 2>/dev/null || echo "Unknown")
 echo -e "${GREEN}✓ Connected successfully! Device: $MODEL${NC}"
 
-echo -e "\n${BLUE}[2/6] Running Safe Debloat (preserving Voice Assistant & HDMI)...${NC}"
+echo -e "\n${BLUE}[2/6] Running Safe Debloat (preserving Voice Assistant, HDMI, & Stock Media Apps)...${NC}"
+# ==============================================================================
+# ВАЖНО: НИКОГДА НЕ УДАЛЯТЬ ШТАТНЫЕ МЕДИА-ПРИЛОЖЕНИЯ:
+# - com.vk.tv                  (Штатное ВК Видео для ТВ — отлично работает из коробки)
+# - ru.ivi.client.global       (Штатный онлайн-кинотеатр Иви)
+# - io.gh.reisxd.tizentube.cobalt / ru.sberdevices.startube (YouTube Leanback)
+# - com.salute.star / ru.sberdevices.voice.* (Голосовой ассистент Салют)
+# - ru.sberdevices.tvinputs / com.mediatek.tvinput (Входы HDMI и ТВ-тюнер)
+# ==============================================================================
 DEBLOAT_LIST=(
     "ru.sberdevices.survey"
     "ru.sberdevices.openbeta"

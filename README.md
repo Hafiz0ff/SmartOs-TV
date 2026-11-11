@@ -44,6 +44,20 @@ The setup script automatically:
 
 ---
 
+## Salute TV Protected Applications Policy
+
+На телевизорах **Салют ТВ** (и аналогичных Android TV) скрипты оптимизации **строго защищают и НЕ удаляют** следующие штатные приложения, которые отлично работают из коробки:
+
+- **Иви (`ru.ivi.client.global`)** — штатный онлайн-кинотеатр с нативной поддержкой пульта и аппаратного декодирования.
+- **VK Видео (`com.vk.tv`)** — официальное приложение ВК Видео для ТВ, быстрое и полностью рабочее.
+- **YouTube Leanback (`io.gh.reisxd.tizentube.cobalt`)** — клиент на движке Google Cobalt, работающий без Google Play Services / microG с поддержкой личного аккаунта и Cast/DIAL.
+- **Голосовой ассистент Салют (`com.salute.star`, `ru.sberdevices.voice.*`)** — системная служба кнопки микрофона на пульте.
+- **Входы HDMI и ТВ-тюнер (`ru.sberdevices.tvinputs`, `com.mediatek.tvinput`)** — сквозные ТВ-входы.
+
+Удаляются исключительно фоновые промо-сервисы, опросы, телеметрия и тяжёлые стоковые лаунчеры.
+
+---
+
 ## Security & Privacy
 
 This repository contains no private credentials, Wi-Fi keys, or device serial numbers. All operations use standard Android Debug Bridge commands with sanitized input parameters.

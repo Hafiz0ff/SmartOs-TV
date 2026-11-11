@@ -7,6 +7,15 @@ echo "========================================"
 echo "SmartTV-Hub: Starting System Debloat..."
 echo "========================================"
 
+# ==============================================================================
+# ВАЖНО: НИКОГДА НЕ УДАЛЯТЬ ШТАТНЫЕ МЕДИА-ПРИЛОЖЕНИЯ:
+# - com.vk.tv                  (Штатное ВК Видео для ТВ — отлично работает из коробки)
+# - ru.ivi.client.global       (Штатный онлайн-кинотеатр Иви)
+# - io.gh.reisxd.tizentube.cobalt / ru.sberdevices.startube (YouTube Leanback)
+# - com.salute.star / ru.sberdevices.voice.* (Голосовой ассистент Салют)
+# - ru.sberdevices.tvinputs / com.mediatek.tvinput (Входы HDMI и ТВ-тюнер)
+# ==============================================================================
+
 # List of safe-to-remove packages
 DEBLOAT_LIST=(
     # Group A: Telemetry, feedback and promo

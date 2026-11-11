@@ -1522,6 +1522,12 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         }
     }
 
+    void reloadWallpaper() {
+        if (wallpaperPlayer != null) {
+            wallpaperPlayer.reload(this, Config.load(this));
+        }
+    }
+
     /**
      * A Settings button sent as a keycode (settings_key_keycodes, e.g. 83 on TCL Google TV remotes) opens the same
      * thing HomeKeyService would. While that service runs it consumes the key first; without it (not enabled,

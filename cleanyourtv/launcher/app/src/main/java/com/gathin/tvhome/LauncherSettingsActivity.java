@@ -27,10 +27,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import android.util.Log;
 
 /**
  * Apple tvOS style "Home Settings" screen:
@@ -407,20 +413,14 @@ public final class LauncherSettingsActivity extends Activity {
         if ("random".equalsIgnoreCase(key)) {
             return "🎲 Случайные обои (" + (rotMin > 0 ? rotMin + " мин" : "при запуске") + ")";
         }
-        if ("001.jpg".equals(key)) return "01. Золотой закат в горах";
-        if ("002.jpg".equals(key)) return "02. Шотландские холмы";
-        if ("003.jpg".equals(key)) return "03. Альпийское утро";
-        if ("004.jpg".equals(key)) return "04. Горное озеро (Новая Зеландия)";
-        if ("005.jpg".equals(key)) return "05. Лесная река";
-        if ("006.jpg".equals(key)) return "06. Осенняя тропа";
-        if ("007.jpg".equals(key)) return "07. Зимний рассвет";
-        if ("008.jpg".equals(key)) return "08. Горная вершина";
-        if ("009.jpg".equals(key)) return "09. Мшистый хвойный лес";
-        if ("010.jpg".equals(key)) return "10. Скалистый каньон";
-        if ("011.jpg".equals(key)) return "11. Лавандовое поле";
-        if ("012.jpg".equals(key)) return "12. Вечерние фьорды";
         if ("none".equals(key)) return "Тёмный минимализм (чистое стекло)";
-        return key;
+        File dir = Config.dir(this);
+        File wpDir = dir == null ? null : new File(dir, "wallpapers");
+        Map<String, String> captions = WallpaperCaptions.read(wpDir);
+        if (captions.containsKey(key)) {
+            return captions.get(key);
+        }
+        return key.replaceFirst("[.][^.]+$", "");
     }
 
     // --------------------------------------------------------------------------
@@ -430,33 +430,47 @@ public final class LauncherSettingsActivity extends Activity {
         addHeader("ОБОИ И ТЕМЫ");
 
         SharedPreferences sp = getSharedPreferences(PREF_SETTINGS, MODE_PRIVATE);
-        String wpChoice = sp.getString(Config.WALLPAPER_CHOICE_KEY, "004.jpg");
+        String wpChoice = sp.getString(Config.WALLPAPER_CHOICE_KEY, "random");
         int rotMinutes = sp.getInt("wallpaper_rotation_minutes", 15);
 
         final View[] rotCardRef = new View[1];
 
+        File dir = Config.dir(this);
+        File wpDir = dir == null ? null : new File(dir, "wallpapers");
+        List<File> images = WallpaperRotation.images(wpDir);
+        Map<String, String> captions = WallpaperCaptions.read(wpDir);
+
+        List<String> labelsList = new ArrayList<>();
+        List<String> valuesList = new ArrayList<>();
+
+        labelsList.add("🎲 Случайные обои (слайдшоу)");
+        valuesList.add("random");
+
+        int num = 1;
+        for (File img : images) {
+            String fname = img.getName();
+            String caption = captions.get(fname);
+            String title = caption != null && !caption.isEmpty() ? caption : fname.replaceFirst("[.][^.]+$", "");
+            String numPrefix = (num < 10 ? "0" : "") + num + ". ";
+            labelsList.add(numPrefix + title);
+            valuesList.add(fname);
+            num++;
+        }
+
+        labelsList.add("Тёмный минимализм (чистое стекло)");
+        valuesList.add("none");
+
+        final String[] wpLabels = labelsList.toArray(new String[0]);
+        final String[] wpValues = valuesList.toArray(new String[0]);
+
+        if (!valuesList.contains(wpChoice)) {
+            wpChoice = "random";
+            sp.edit().putString(Config.WALLPAPER_CHOICE_KEY, "random").apply();
+        }
+
         addChoiceRow("Обои рабочего стола", "Выберите картину для фона или слайдшоу", getWallpaperDisplayName(wpChoice, rotMinutes), (card, cardIdx) -> {
-            String currentWp = sp.getString(Config.WALLPAPER_CHOICE_KEY, "004.jpg");
-            showChoiceDialog("Обои рабочего стола", new String[]{
-                    "🎲 Случайные обои (слайдшоу)",
-                    "01. Золотой закат в горах",
-                    "02. Шотландские холмы",
-                    "03. Альпийское утро",
-                    "04. Горное озеро (Новая Зеландия)",
-                    "05. Лесная река",
-                    "06. Осенняя тропа",
-                    "07. Зимний рассвет",
-                    "08. Горная вершина",
-                    "09. Мшистый хвойный лес",
-                    "10. Скалистый каньон",
-                    "11. Лавандовое поле",
-                    "12. Вечерние фьорды",
-                    "Тёмный минимализм (чистое стекло)"
-            }, new String[]{
-                    "random",
-                    "001.jpg", "002.jpg", "003.jpg", "004.jpg", "005.jpg", "006.jpg",
-                    "007.jpg", "008.jpg", "009.jpg", "010.jpg", "011.jpg", "012.jpg", "none"
-            }, currentWp, card, (val, lbl) -> {
+            String currentWp = sp.getString(Config.WALLPAPER_CHOICE_KEY, "random");
+            showChoiceDialog("Обои рабочего стола", wpLabels, wpValues, currentWp, card, (val, lbl) -> {
                 sp.edit().putString(Config.WALLPAPER_CHOICE_KEY, val).apply();
                 markChanged();
                 int currentRot = sp.getInt("wallpaper_rotation_minutes", 15);
@@ -487,6 +501,33 @@ public final class LauncherSettingsActivity extends Activity {
         if (!"random".equalsIgnoreCase(wpChoice)) {
             rotCardRef[0].setVisibility(View.GONE);
         }
+
+        addHeader("АВТООБНОВЛЕНИЕ ОБОЕВ");
+
+        int syncDays = sp.getInt("wallpaper_sync_days", 7);
+        String syncLabel;
+        if (syncDays == 7) syncLabel = "Каждые 7 дней (рекомендуется)";
+        else if (syncDays == 10) syncLabel = "Каждые 10 дней";
+        else if (syncDays == 14) syncLabel = "Каждые 14 дней";
+        else syncLabel = "Выключено";
+
+        addChoiceRow("Период обновления", "Как часто проверять новые картины из облака", syncLabel, (card, cardIdx) -> {
+            int curDays = sp.getInt("wallpaper_sync_days", 7);
+            showChoiceDialog("Период обновления обоев", new String[]{
+                    "Каждые 7 дней (рекомендуется)",
+                    "Каждые 10 дней",
+                    "Каждые 14 дней",
+                    "Выключено"
+            }, new String[]{"7", "10", "14", "0"}, String.valueOf(curDays), card, (val, lbl) -> {
+                int days = Integer.parseInt(val);
+                sp.edit().putInt("wallpaper_sync_days", days).apply();
+                markChanged();
+                String l = days == 7 ? "Каждые 7 дней (рекомендуется)" : (days == 10 ? "Каждые 10 дней" : (days == 14 ? "Каждые 14 дней" : "Выключено"));
+                setCardValue(card, l);
+            });
+        });
+
+        addActionRow("Источники и лицензии", "Авторы и лицензии CC BY-SA из Wikimedia Commons", "Смотреть ›", this::showCreditsDialog);
 
         addHeader("ПРОЗРАЧНОСТЬ И ЭФФЕКТЫ");
 
@@ -1325,6 +1366,50 @@ public final class LauncherSettingsActivity extends Activity {
         });
 
         dialog.show();
+    }
+
+    private void showCreditsDialog() {
+        File dir = Config.dir(this);
+        File creditsFile = dir == null ? null : new File(dir, "wallpapers/credits.json");
+        StringBuilder sb = new StringBuilder();
+        if (creditsFile != null && creditsFile.isFile()) {
+            try {
+                String jsonStr = new String(Files.readAllBytes(creditsFile.toPath()), StandardCharsets.UTF_8);
+                JSONObject obj = new JSONObject(jsonStr);
+                JSONArray arr = obj.optJSONArray("credits");
+                if (arr != null) {
+                    for (int i = 0; i < arr.length(); i++) {
+                        JSONObject c = arr.getJSONObject(i);
+                        String title = c.optString("title", "");
+                        String author = c.optString("author", "");
+                        String license = c.optString("license", "");
+                        sb.append(i + 1).append(". ").append(title).append("\n");
+                        sb.append("   Автор: ").append(author).append(" (").append(license).append(")\n\n");
+                    }
+                }
+            } catch (Exception e) {
+                Log.w("TvHome.Settings", "Failed to parse credits.json", e);
+            }
+        }
+        if (sb.length() == 0) {
+            File wpDir = dir == null ? null : new File(dir, "wallpapers");
+            Map<String, String> captions = WallpaperCaptions.read(wpDir);
+            if (!captions.isEmpty()) {
+                int i = 1;
+                for (Map.Entry<String, String> entry : captions.entrySet()) {
+                    sb.append(i++).append(". ").append(entry.getValue()).append("\n");
+                    sb.append("   Лицензия: CC BY-SA 4.0 (Wikimedia Commons)\n\n");
+                }
+            } else {
+                sb.append("Все фоновые картины распространяются по открытой лицензии Creative Commons (CC BY-SA 4.0) из архива Wikimedia Commons.");
+            }
+        }
+
+        new AlertDialog.Builder(this)
+                .setTitle("Источники и лицензии обоев")
+                .setMessage(sb.toString().trim())
+                .setPositiveButton("Понятно", null)
+                .show();
     }
 
     private void markChanged() {
