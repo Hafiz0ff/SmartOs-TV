@@ -9,11 +9,15 @@ echo "========================================"
 
 # ==============================================================================
 # ВАЖНО: НИКОГДА НЕ УДАЛЯТЬ ШТАТНЫЕ МЕДИА-ПРИЛОЖЕНИЯ:
+# - ru.sberdevices.starmarket  (Магазин приложений Сбера — сохранен!)
 # - com.vk.tv                  (Штатное ВК Видео для ТВ — отлично работает из коробки)
-# - ru.ivi.client.global       (Штатный онлайн-кинотеатр Иви)
-# - io.gh.reisxd.tizentube.cobalt / ru.sberdevices.startube (YouTube Leanback)
+# - ru.ivi.client / global     (Штатный онлайн-кинотеатр Иви)
+# - ru.kinopoisk.tv            (Штатный Кинопоиск)
+# - ru.rutube.app              (Штатный Rutube)
 # - com.salute.star / ru.sberdevices.voice.* (Голосовой ассистент Салют)
 # - ru.sberdevices.tvinputs / com.mediatek.tvinput (Входы HDMI и ТВ-тюнер)
+# Примечание: штатный YouTube (ru.sberdevices.startube) удаляется в пользу
+# высокопроизводительного TizenTube Cobalt + VOT (io.gh.reisxd.tizentube.cobalt).
 # ==============================================================================
 
 # List of safe-to-remove packages
@@ -27,12 +31,22 @@ DEBLOAT_LIST=(
     "ru.sberdevices.TvFactoryHelper"
 
     # Group B: Unused Sber bloatware
-    "com.zvuk.tvsalute"
     "ru.sberdevices.sberplay"
     "ru.sberdevices.subscriptions"
     "ru.sberdevices.parentcontrol"
-    "ru.sberdevices.starmarket"
     "ru.sberdevices.starkidsroom.prod"
+
+    # Group C: Unused video/audio services
+    "ru.rt.video.app.tv"
+    "tv.lfstrm.smotreshka_stb"
+    "ru.more.play"
+    "ru.sberdevices.music"
+
+    # Group D: Background cleaner (frees ~41.5 MB RAM)
+    "ru.sberdevices.starcleaner"
+
+    # Group E: Slow stock YouTube (replaced by TizenTube Cobalt + VOT)
+    "ru.sberdevices.startube"
 )
 
 echo "Uninstalling bloatware for user 0..."

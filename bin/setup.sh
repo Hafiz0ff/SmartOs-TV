@@ -58,11 +58,15 @@ echo -e "${GREEN}✓ Connected successfully! Device: $MODEL${NC}"
 echo -e "\n${BLUE}[2/6] Running Safe Debloat (preserving Voice Assistant, HDMI, & Stock Media Apps)...${NC}"
 # ==============================================================================
 # ВАЖНО: НИКОГДА НЕ УДАЛЯТЬ ШТАТНЫЕ МЕДИА-ПРИЛОЖЕНИЯ:
+# - ru.sberdevices.starmarket  (Магазин приложений Сбера — сохранен!)
 # - com.vk.tv                  (Штатное ВК Видео для ТВ — отлично работает из коробки)
-# - ru.ivi.client.global       (Штатный онлайн-кинотеатр Иви)
-# - io.gh.reisxd.tizentube.cobalt / ru.sberdevices.startube (YouTube Leanback)
+# - ru.ivi.client / global     (Штатный онлайн-кинотеатр Иви)
+# - ru.kinopoisk.tv            (Штатный Кинопоиск)
+# - ru.rutube.app              (Штатный Rutube)
 # - com.salute.star / ru.sberdevices.voice.* (Голосовой ассистент Салют)
 # - ru.sberdevices.tvinputs / com.mediatek.tvinput (Входы HDMI и ТВ-тюнер)
+# Примечание: штатный YouTube (ru.sberdevices.startube) удаляется в пользу
+# высокопроизводительного TizenTube Cobalt + VOT (io.gh.reisxd.tizentube.cobalt).
 # ==============================================================================
 DEBLOAT_LIST=(
     "ru.sberdevices.survey"
@@ -71,12 +75,16 @@ DEBLOAT_LIST=(
     "ru.sberdevices.smarthome.promo"
     "ru.sberdevices.CleanupStub"
     "ru.sberdevices.TvFactoryHelper"
-    "com.zvuk.tvsalute"
     "ru.sberdevices.sberplay"
     "ru.sberdevices.subscriptions"
     "ru.sberdevices.parentcontrol"
-    "ru.sberdevices.starmarket"
     "ru.sberdevices.starkidsroom.prod"
+    "ru.rt.video.app.tv"
+    "tv.lfstrm.smotreshka_stb"
+    "ru.more.play"
+    "ru.sberdevices.music"
+    "ru.sberdevices.starcleaner"
+    "ru.sberdevices.startube"
 )
 
 for pkg in "${DEBLOAT_LIST[@]}"; do
@@ -99,25 +107,32 @@ echo -e "${GREEN}✓ Animation scales set to 0.5x for instant response.${NC}"
 echo -e "\n${BLUE}[4/6] Installing Essential Apps...${NC}"
 APKS_DIR="$ROOT_DIR/apks"
 if [ -d "$APKS_DIR" ]; then
-    # Priority: if TV already has stock YouTube (ru.sberdevices.startube, com.google.android.youtube.tv, etc.), keep it!
-    EXISTING_YT=$(adb -s "$TARGET" shell pm list packages | grep -E "ru.sberdevices.startube|com.google.android.youtube.tv|io.gh.reisxd.tizentube.cobalt" | head -n 1 | cut -d: -f2 | tr -d '\r' || true)
-    if [ -n "$EXISTING_YT" ]; then
-        echo -e "  ✓ Found active YouTube on TV: ${GREEN}$EXISTING_YT${NC} (preserved, keeping stock app)"
-    else
-        if [ ! -f "$APKS_DIR/YouTube-Leanback-Cobalt.apk" ]; then
-            echo -e "  YouTube missing on TV. Fetching ${YELLOW}YouTube Leanback (Cobalt)${NC} from GitHub..."
-            curl -sL "https://github.com/reisxd/TizenTubeCobalt/releases/download/v2.0.3/cobalt-arm.apk" -o "$APKS_DIR/YouTube-Leanback-Cobalt.apk" || true
+    # Ensure TizenTube Cobalt + VOT (with custom YouTube TV banner) is ready
+    if [ ! -f "$APKS_DIR/TizenTube-Cobalt-Custom.apk" ]; then
+        if [ ! -f "$APKS_DIR/TizenTube-Cobalt-VOT.apk" ]; then
+            echo -e "  Fetching ${YELLOW}TizenTube Cobalt + VOT${NC} from GitHub releases..."
+            curl -sL "https://github.com/DrA1ex/TizenTubeCobalt_VOT/releases/download/v8.6/TizenTubeCobalt_VOT_arm7.apk" -o "$APKS_DIR/TizenTube-Cobalt-VOT.apk" || true
+        fi
+        if [ -f "$APKS_DIR/TizenTube-Cobalt-VOT.apk" ] && [ -f "$ROOT_DIR/tools/patch_apk_banner.py" ]; then
+            echo -e "  Applying custom YouTube Leanback banner..."
+            python3 "$ROOT_DIR/tools/patch_apk_banner.py" --app yt || cp "$APKS_DIR/TizenTube-Cobalt-VOT.apk" "$APKS_DIR/TizenTube-Cobalt-Custom.apk"
         fi
     fi
 
-    for apk in "$APKS_DIR"/*.apk; do
+    # Explicit target APKs
+    TARGET_APKS=(
+        "SmartOs-Launcher-v3.3.apk"
+        "HDRezka-v0.4.2-release.apk"
+        "IPTV-Pro-10.0.1-armv7.apk"
+        "VK-VideoApp-Custom.apk"
+        "TizenTube-Cobalt-Custom.apk"
+    )
+
+    for apk_name in "${TARGET_APKS[@]}"; do
+        apk="$APKS_DIR/$apk_name"
         if [ -f "$apk" ]; then
-            name=$(basename "$apk")
-            if [ "$name" = "YouTube-Leanback-Cobalt.apk" ] && [ -n "$EXISTING_YT" ] && [ "$EXISTING_YT" != "io.gh.reisxd.tizentube.cobalt" ]; then
-                continue # Skip overwriting native stock YouTube with Cobalt
-            fi
-            echo -e "  Installing ${YELLOW}$name${NC}..."
-            adb -s "$TARGET" install -r -d "$apk" >/dev/null 2>&1 || echo "  (warning: install status check)"
+            echo -e "  Installing ${YELLOW}$apk_name${NC}..."
+            adb -s "$TARGET" install -r -d -g "$apk" >/dev/null 2>&1 || echo "  (warning: install status check)"
         fi
     done
     # Set SmartOs-TV as default launcher
@@ -127,16 +142,14 @@ else
     echo -e "${YELLOW}No apks directory found, skipping.${NC}"
 fi
 
-echo -e "\n${BLUE}[5/6] Pushing Curated IPTV Playlists...${NC}"
+echo -e "\n${BLUE}[5/6] Pushing Unified IPTV Playlist...${NC}"
 PLAYLISTS_DIR="$ROOT_DIR/playlists"
 if [ -d "$PLAYLISTS_DIR" ]; then
     adb -s "$TARGET" shell mkdir -p /sdcard/Playlists/
-    for m3u in "$PLAYLISTS_DIR"/*.m3u; do
-        if [ -f "$m3u" ]; then
-            adb -s "$TARGET" push "$m3u" /sdcard/Playlists/ >/dev/null 2>&1 || true
-        fi
-    done
-    echo -e "${GREEN}✓ Playlists pushed to /sdcard/Playlists/${NC}"
+    if [ -f "$PLAYLISTS_DIR/00_Единый_Плейлист_Все_Каналы.m3u" ]; then
+        adb -s "$TARGET" push "$PLAYLISTS_DIR/00_Единый_Плейлист_Все_Каналы.m3u" /sdcard/Playlists/ >/dev/null 2>&1 || true
+        echo -e "${GREEN}✓ 00_Единый_Плейлист_Все_Каналы.m3u pushed to /sdcard/Playlists/${NC}"
+    fi
 fi
 
 echo -e "\n${BLUE}[6/6] Applying Salute Glass Theme & Config...${NC}"

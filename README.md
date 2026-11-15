@@ -26,6 +26,7 @@ The setup script automatically:
 ## Key Features
 
 - **SmartOs Launcher**: Ultra-lightweight (<650 KB), smooth 60 FPS UI with frosted glass dock.
+- **Custom Leanback Banners**: Tailored high-resolution TV banners for YouTube (Cobalt Leanback) and VK Video matching native Android TV styling.
 - **Prayer Times Widget**: Accurate Hanafi prayer calculations and upcoming prayer countdown.
 - **Weather Widget**: Real-time temperature and conditions via Open-Meteo.
 - **Autonomous Wallpaper Hub**: Direct HTTPS wallpaper rotation from Wikimedia Commons (CC BY-SA / Public Domain).
@@ -39,20 +40,27 @@ The setup script automatically:
 - `cleanyourtv/`: Android Studio project source code for the custom launcher.
 - `wallpapers/`: Local wallpaper pack, JSON manifest, captions, and license credits.
 - `playlists/`: Clean IPTV channel playlists.
-- `tools/`: Wikimedia wallpaper sync utilities.
+- `tools/`: Wikimedia wallpaper sync utilities, banner assets, and `patch_apk_banner.py`.
 - `.github/workflows/`: Automated wallpaper update workflow.
 
 ---
 
-## Salute TV Protected Applications Policy
+## Salute TV Protected Applications & YouTube Policy
 
-На телевизорах **Салют ТВ** (и аналогичных Android TV) скрипты оптимизации **строго защищают и НЕ удаляют** следующие штатные приложения, которые отлично работают из коробки:
+На телевизорах **Салют ТВ** (и аналогичных Android TV) скрипты оптимизации строго защищают и **НЕ удаляют** полезные штатные сервисы:
 
-- **Иви (`ru.ivi.client.global`)** — штатный онлайн-кинотеатр с нативной поддержкой пульта и аппаратного декодирования.
-- **VK Видео (`com.vk.tv`)** — официальное приложение ВК Видео для ТВ, быстрое и полностью рабочее.
-- **YouTube (`io.gh.reisxd.tizentube.cobalt` / `ru.sberdevices.startube` / `com.google.android.youtube.tv`)** — **Приоритет: сохранение имеющегося штатного YouTube!** Если на ТВ уже работает штатный YouTube (например, `ru.sberdevices.startube`), он сохраняется нетронутым. Cobalt (`io.gh.reisxd.tizentube.cobalt`) устанавливается только если YouTube на ТВ отсутствует.
-- **Голосовой ассистент Салют (`com.salute.star`, `ru.sberdevices.voice.*`)** — системная служба кнопки микрофона на пульте.
+- **Каталог Сбера (`ru.sberdevices.starmarket`)** — встроенный магазин приложений.
+- **Иви (`ru.ivi.client`)** — штатный онлайн-кинотеатр с нативной поддержкой пульта и аппаратного декодирования.
+- **Кинопоиск (`ru.kinopoisk.tv`)** — штатный клиент Кинопоиска.
+- **Rutube (`ru.rutube.app`)** — штатное ТВ-приложение Rutube.
+- **VK Видео (`org.xjiop.vkvideoapp` / `com.vk.tv`)** — быстрый плеер ВК Видео с оригинальным Leanback-баннером.
+- **Голосовой ассистент Салют (`com.salute.star`, `ru.sberdevices.voice.*`)** — системная служба микрофона на пульте.
 - **Входы HDMI и ТВ-тюнер (`ru.sberdevices.tvinputs`, `com.mediatek.tvinput`)** — сквозные ТВ-входы.
+
+### Замена штатного YouTube на TizenTube Cobalt + VOT:
+- Штатный YouTube Сбера (`ru.sberdevices.startube`) **удаляется в процессе деблоата**, так как он крайне медленный, перегружен телеметрией и не поддерживает современные функции.
+- Вместо него устанавливается **TizenTube Cobalt + VOT** (`io.gh.reisxd.tizentube.cobalt`) — сверхбыстрый YouTube Leanback клиент со встроенным голосовым переводом видео на русский язык (VOT), SponsorBlock и кастомным оригинальным Leanback TV-баннером YouTube.
+- Рекомендации и история просмотров с TizenTube Cobalt автоматически подхватываются блоком *«Продолжить просмотр»* домашнего экрана SmartOs Launcher.
 
 Удаляются исключительно фоновые промо-сервисы, опросы, телеметрия и тяжёлые стоковые лаунчеры.
 
