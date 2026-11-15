@@ -1,6 +1,6 @@
 {
   "dock_apps": [
-    "org.xjiop.vkvideoapp",
+    "com.vk.tv",
     "io.gh.reisxd.tizentube.cobalt",
     "ru.iptvremote.android.iptv.pro",
     "com.raccoon.hdrezkav2",
@@ -9,11 +9,13 @@
   ],
   "app_labels": [
     "io.gh.reisxd.tizentube.cobalt=YouTube",
+    "com.vk.tv=VK Видео",
     "org.xjiop.vkvideoapp=VK Видео",
     "ru.iptvremote.android.iptv.pro=IPTV",
     "com.raccoon.hdrezkav2=HDRezka",
     "ru.rutube.app=Rutube",
     "ru.ivi.client=Иви",
+    "ru.ivi.client.global=Иви",
     "ru.sberdevices.starlauncher=Салют ТВ",
     "ru.sberdevices.starmarket=Каталог Сбера",
     "ru.sberdevices.settings=Центр управления"

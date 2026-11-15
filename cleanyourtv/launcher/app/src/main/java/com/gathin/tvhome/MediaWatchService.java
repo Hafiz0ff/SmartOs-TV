@@ -277,7 +277,8 @@ public class MediaWatchService extends NotificationListenerService {
      * Store and persistence for Continue Watching items.
      */
     public static final class Store {
-        static final int MAX = 12;
+        static final int MAX = 18;
+        static final int MAX_CONTINUE_IN_ROW1 = 8;
         static final long EXPIRE_MS = 7L * 24 * 60 * 60 * 1000; // 7 days
 
         static File file(Context c) {
@@ -440,7 +441,35 @@ public class MediaWatchService extends NotificationListenerService {
             List<WatchNextItem> out = new ArrayList<>();
             Set<String> seenKeys = new HashSet<>();
             android.content.SharedPreferences wp = c.getSharedPreferences("watch_next_prefs", Context.MODE_PRIVATE);
+            if (!wp.getBoolean("migrated_recs_v3", false)) {
+                synchronized (Store.class) {
+                    if (!wp.getBoolean("migrated_recs_v3", false)) {
+                        JSONArray existing = read(c);
+                        JSONArray cleaned = new JSONArray();
+                        boolean changed = false;
+                        for (int i = 0; i < existing.length(); i++) {
+                            JSONObject o = existing.optJSONObject(i);
+                            if (o == null) continue;
+                            if ("mobi.zona".equalsIgnoreCase(o.optString("pkg"))) {
+                                changed = true;
+                                continue;
+                            }
+                            cleaned.put(o);
+                        }
+                        if (changed) {
+                            write(c, cleaned);
+                        }
+                        File oldCache = new File(c.getFilesDir(), "releases_cache_v2.json");
+                        if (oldCache.exists()) {
+                            //noinspection ResultOfMethodCallIgnored
+                            oldCache.delete();
+                        }
+                        wp.edit().putBoolean("migrated_recs_v3", true).apply();
+                    }
+                }
+            }
             String mode = wp.getString("shelf_mode", "all");
+            int continueCap = "continue_only".equals(mode) ? MAX : MAX_CONTINUE_IN_ROW1;
 
             PackageManager pm = c.getPackageManager();
 
@@ -450,6 +479,7 @@ public class MediaWatchService extends NotificationListenerService {
 
                 // 1. Items from MediaSession
                 for (int i = 0; i < a.length(); i++) {
+                    if (out.size() >= continueCap) break;
                     JSONObject o = a.optJSONObject(i);
                     if (o == null) continue;
                     String pkg = o.optString("pkg");
@@ -479,12 +509,14 @@ public class MediaWatchService extends NotificationListenerService {
                 }
 
                 // 2. Merge Android TV TvProvider watch_next_program
-                List<WatchNextItem> tvProviderItems = queryTvProviderWatchNext(c, 8);
-                for (WatchNextItem item : tvProviderItems) {
-                    if (out.size() >= MAX) break;
-                    if (!isVkPkg(item.pkg) && !isVlcPkg(item.pkg) && !seenKeys.contains(item.key) && isInstalled(pm, item.pkg)) {
-                        seenKeys.add(item.key);
-                        out.add(item);
+                if (out.size() < continueCap) {
+                    List<WatchNextItem> tvProviderItems = queryTvProviderWatchNext(c, 8);
+                    for (WatchNextItem item : tvProviderItems) {
+                        if (out.size() >= continueCap) break;
+                        if (!isVkPkg(item.pkg) && !isVlcPkg(item.pkg) && !seenKeys.contains(item.key) && isInstalled(pm, item.pkg)) {
+                            seenKeys.add(item.key);
+                            out.add(item);
+                        }
                     }
                 }
             }

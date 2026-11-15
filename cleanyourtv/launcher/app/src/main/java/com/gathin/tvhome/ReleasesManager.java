@@ -27,21 +27,29 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 public final class ReleasesManager {
     private static final String TAG = "ReleasesManager";
-    private static final String CACHE_FILE = "releases_cache_v2.json";
+    private static final String CACHE_FILE = "releases_cache_v3.json";
+    private static final String LEGACY_CACHE_FILE = "releases_cache_v2.json";
     private static final String PREF_KP_CACHE = "kinopoisk_id_cache";
 
     private static final String JW_GRAPHQL = "https://apis.justwatch.com/graphql";
-    private static final String JW_QUERY = "query P($country: Country!, $language: Language!, $first: Int!, $filter: TitleFilter) {"
-            + " popularTitles(country: $country, filter: $filter, first: $first, sortBy: POPULAR, sortRandomSeed: 0) {"
-            + " edges { node { id objectType content(country: $country, language: $language) {"
-            + " title originalReleaseYear shortDescription genres { shortName } backdrops { backdropUrl } scoring { imdbScore } }"
-            + " } } } }";
+    private static final String JW_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+
+    private static String buildJwQuery(String sortBy) {
+        return "query P($country: Country!, $language: Language!, $first: Int!, $filter: TitleFilter) {"
+                + " popularTitles(country: $country, filter: $filter, first: $first, sortBy: " + sortBy + ", sortRandomSeed: 0) {"
+                + " edges { node { id objectType content(country: $country, language: $language) {"
+                + " title originalReleaseYear shortDescription genres { shortName } backdrops { backdropUrl } scoring { imdbScore } }"
+                + " } } } }";
+    }
 
     private static List<WatchNextItem> memoryCache = null;
     private static long lastFetchTime = 0L;
@@ -116,7 +124,7 @@ public final class ReleasesManager {
         if (hours <= 0) {
             seed = System.currentTimeMillis();
         } else {
-            seed = System.currentTimeMillis() / (hours * 3600L * 1000L);
+            seed = System.currentTimeMillis() / (1800L * 1000L);
         }
         List<WatchNextItem> copy = new ArrayList<>(list);
         Collections.shuffle(copy, new java.util.Random(seed));
@@ -129,23 +137,70 @@ public final class ReleasesManager {
         return new ArrayList<>(list.subList(0, max));
     }
 
+    private static boolean hasCyrillic(String s) {
+        if (s == null) return false;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if ((c >= 'А' && c <= 'я') || c == 'Ё' || c == 'ё') return true;
+        }
+        return false;
+    }
+
     private static List<WatchNextItem> fetchOnline(Context context) {
+        int maxYear = Calendar.getInstance().get(Calendar.YEAR);
+        if (maxYear < 2025) maxYear = 2026;
+        int minYear = maxYear - 1;
+
+        List<WatchNextItem> movies = fetchJustWatchCategory(context, "MOVIE", minYear, maxYear, "TRENDING", 20);
+        List<WatchNextItem> shows = fetchJustWatchCategory(context, "SHOW", minYear, maxYear, "TRENDING", 20);
+
+        if (movies.size() < 6) {
+            movies.addAll(fetchJustWatchCategory(context, "MOVIE", minYear, maxYear, "POPULAR", 16));
+        }
+        if (shows.size() < 6) {
+            shows.addAll(fetchJustWatchCategory(context, "SHOW", minYear, maxYear, "POPULAR", 16));
+        }
+
+        List<WatchNextItem> combined = new ArrayList<>();
+        Set<String> seen = new HashSet<>();
+        int maxLen = Math.max(movies.size(), shows.size());
+        for (int i = 0; i < maxLen; i++) {
+            if (i < movies.size()) {
+                WatchNextItem m = movies.get(i);
+                if (seen.add(m.key)) combined.add(m);
+            }
+            if (i < shows.size()) {
+                WatchNextItem s = shows.get(i);
+                if (seen.add(s.key)) combined.add(s);
+            }
+        }
+        return combined.isEmpty() ? null : combined;
+    }
+
+    private static List<WatchNextItem> fetchJustWatchCategory(Context context, String objTypeFilter,
+                                                            int minYear, int maxYear, String sortBy, int first) {
+        List<WatchNextItem> preferred = new ArrayList<>();
+        List<WatchNextItem> secondary = new ArrayList<>();
         HttpURLConnection conn = null;
         try {
             JSONObject filter = new JSONObject();
             JSONArray objectTypes = new JSONArray();
-            objectTypes.put("MOVIE");
-            objectTypes.put("SHOW");
+            objectTypes.put(objTypeFilter);
             filter.put("objectTypes", objectTypes);
+
+            JSONObject releaseYear = new JSONObject();
+            releaseYear.put("min", minYear);
+            releaseYear.put("max", maxYear);
+            filter.put("releaseYear", releaseYear);
 
             JSONObject vars = new JSONObject();
             vars.put("country", "RU");
             vars.put("language", "ru");
-            vars.put("first", 36);
+            vars.put("first", first);
             vars.put("filter", filter);
 
             JSONObject body = new JSONObject();
-            body.put("query", JW_QUERY);
+            body.put("query", buildJwQuery(sortBy));
             body.put("variables", vars);
 
             byte[] postData = body.toString().getBytes(StandardCharsets.UTF_8);
@@ -153,11 +208,12 @@ public final class ReleasesManager {
             URL url = new URL(JW_GRAPHQL);
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
-            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setRequestProperty("Content-Type", "application/json; charset=utf-8");
             conn.setRequestProperty("Accept", "application/json");
+            conn.setRequestProperty("User-Agent", JW_USER_AGENT);
             conn.setDoOutput(true);
-            conn.setConnectTimeout(4500);
-            conn.setReadTimeout(4500);
+            conn.setConnectTimeout(5000);
+            conn.setReadTimeout(5000);
 
             try (OutputStream os = conn.getOutputStream()) {
                 os.write(postData);
@@ -166,8 +222,8 @@ public final class ReleasesManager {
 
             int code = conn.getResponseCode();
             if (code != 200) {
-                Log.w(TAG, "JustWatch HTTP " + code);
-                return null;
+                Log.w(TAG, "JustWatch HTTP " + code + " for " + objTypeFilter + "/" + sortBy);
+                return preferred;
             }
 
             InputStream is = conn.getInputStream();
@@ -180,17 +236,16 @@ public final class ReleasesManager {
             reader.close();
 
             JSONObject response = new JSONObject(sb.toString());
-            JSONArray edges = response.optJSONObject("data")
-                    .optJSONObject("popularTitles")
-                    .optJSONArray("edges");
+            JSONObject data = response.optJSONObject("data");
+            JSONObject pop = data != null ? data.optJSONObject("popularTitles") : null;
+            JSONArray edges = pop != null ? pop.optJSONArray("edges") : null;
+            if (edges == null || edges.length() == 0) return preferred;
 
-            if (edges == null || edges.length() == 0) return null;
-
-            List<WatchNextItem> out = new ArrayList<>();
             for (int i = 0; i < edges.length(); i++) {
-                JSONObject node = edges.optJSONObject(i).optJSONObject("node");
+                JSONObject edge = edges.optJSONObject(i);
+                JSONObject node = edge != null ? edge.optJSONObject("node") : null;
                 if (node == null) continue;
-                String objType = node.optString("objectType", "MOVIE");
+                String objType = node.optString("objectType", objTypeFilter);
                 JSONObject content = node.optJSONObject("content");
                 if (content == null) continue;
 
@@ -223,7 +278,6 @@ public final class ReleasesManager {
                 item.title = title;
                 item.contentType = isShow ? "serial" : "movie";
 
-                // Check if already in persistent Kinopoisk ID cache
                 KinopoiskMatch match = getCachedKinopoiskMatch(context, title);
                 if (match != null && match.id > 0) {
                     item.kinopoiskId = match.id;
@@ -249,12 +303,17 @@ public final class ReleasesManager {
                 item.progress = -1.0f;
                 item.engagementTs = System.currentTimeMillis();
 
-                out.add(item);
+                if (!artUrl.isEmpty() && (hasCyrillic(title) || imdb >= 6.0)) {
+                    preferred.add(item);
+                } else if (!artUrl.isEmpty()) {
+                    secondary.add(item);
+                }
             }
-            return out;
+            preferred.addAll(secondary);
+            return preferred;
         } catch (Throwable e) {
             Log.w(TAG, "fetchOnline error: " + e.getMessage());
-            return null;
+            return preferred;
         } finally {
             if (conn != null) conn.disconnect();
         }
@@ -262,6 +321,9 @@ public final class ReleasesManager {
 
     private static List<WatchNextItem> loadFromDisk(Context context) {
         try {
+            File legacy = new File(context.getFilesDir(), LEGACY_CACHE_FILE);
+            if (legacy.exists()) legacy.delete();
+
             File f = new File(context.getFilesDir(), CACHE_FILE);
             if (!f.exists()) return null;
             lastFetchTime = f.lastModified();
@@ -339,33 +401,28 @@ public final class ReleasesManager {
     private static List<WatchNextItem> getFallbackTitles() {
         List<WatchNextItem> list = new ArrayList<>();
 
-        WatchNextItem i1 = new WatchNextItem("", "Фильм", "Сто лет тому вперёд", "2024 · Фантастика, Приключения", "", "", -1, 0);
-        i1.kinopoiskId = 1334852L;
+        WatchNextItem i1 = new WatchNextItem("", "Фильм", "Битва за битвой", "2025 · ★ 7.6", "", "", -1, 0);
         i1.contentType = "movie";
         list.add(i1);
 
-        WatchNextItem i2 = new WatchNextItem("", "Сериал", "Слово пацана. Кровь на асфальте", "2023 · Драма, Криминал", "", "", -1, 0);
-        i2.kinopoiskId = 5304403L;
+        WatchNextItem i2 = new WatchNextItem("", "Сериал", "Гангстерленд", "2025 · ★ 8.3", "", "", -1, 0);
+        i2.kinopoiskId = 5512084L;
         i2.contentType = "serial";
         list.add(i2);
 
-        WatchNextItem i3 = new WatchNextItem("", "Фильм", "Мастер и Маргарита", "2024 · Драма, Фэнтези", "", "", -1, 0);
-        i3.kinopoiskId = 1115471L;
+        WatchNextItem i3 = new WatchNextItem("", "Фильм", "F1", "2025 · ★ 7.6", "", "", -1, 0);
         i3.contentType = "movie";
         list.add(i3);
 
-        WatchNextItem i4 = new WatchNextItem("", "Сериал", "Художник", "2022 · Детектив, Триллер", "", "", -1, 0);
-        i4.kinopoiskId = 4317342L;
+        WatchNextItem i4 = new WatchNextItem("", "Сериал", "Декстер: Воскрешение", "2025 · ★ 9.0", "", "", -1, 0);
         i4.contentType = "serial";
         list.add(i4);
 
-        WatchNextItem i5 = new WatchNextItem("", "Фильм", "Лёд 3", "2024 · Мелодрама, Спорт", "", "", -1, 0);
-        i5.kinopoiskId = 5275429L;
+        WatchNextItem i5 = new WatchNextItem("", "Фильм", "Мир Джона Уика", "2025 · ★ 7.6", "", "", -1, 0);
         i5.contentType = "movie";
         list.add(i5);
 
-        WatchNextItem i6 = new WatchNextItem("", "Сериал", "Трасса", "2024 · Психологический триллер", "", "", -1, 0);
-        i6.kinopoiskId = 5305583L;
+        WatchNextItem i6 = new WatchNextItem("", "Сериал", "Рыцарь Семи Королевств", "2026 · ★ 8.6", "", "", -1, 0);
         i6.contentType = "serial";
         list.add(i6);
 
@@ -551,7 +608,7 @@ public final class ReleasesManager {
                 } catch (Throwable ignored) {}
             }
             Toast.makeText(context, "Прямой запуск для Ivi недоступен, открываю главный экран...", Toast.LENGTH_SHORT).show();
-            openAppHome(context, pm, "ru.ivi.client.global");
+            openAppHome(context, pm, "ru.ivi.client.global", "ru.ivi.client");
             return;
         }
 

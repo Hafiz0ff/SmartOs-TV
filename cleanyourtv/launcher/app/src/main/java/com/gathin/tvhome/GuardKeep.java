@@ -79,22 +79,26 @@ final class GuardKeep {
             }
             Settings.Secure.putInt(context.getContentResolver(), Settings.Secure.ACCESSIBILITY_ENABLED, 1);
 
-            // Ensure GuardRevival is in enabled_notification_listeners
-            ComponentName listener = new ComponentName(context, GuardRevival.class);
+            // Ensure GuardRevival and MediaWatchService are in enabled_notification_listeners
+            ComponentName guardListener = new ComponentName(context, GuardRevival.class);
+            ComponentName mediaListener = new ComponentName(context, MediaWatchService.class);
             String nlist = Settings.Secure.getString(context.getContentResolver(),
                     "enabled_notification_listeners");
             List<String> nentries = new ArrayList<>();
-            boolean nfound = false;
+            boolean guardFound = false;
+            boolean mediaFound = false;
             if (nlist != null && !nlist.equals("null")) {
                 for (String entry : nlist.split(":")) {
                     if (entry.isEmpty()) continue;
                     ComponentName name = ComponentName.unflattenFromString(entry);
-                    if (listener.equals(name)) nfound = true;
+                    if (guardListener.equals(name)) guardFound = true;
+                    if (mediaListener.equals(name)) mediaFound = true;
                     nentries.add(entry);
                 }
             }
-            if (!nfound) {
-                nentries.add(listener.flattenToShortString());
+            if (!guardFound) nentries.add(guardListener.flattenToShortString());
+            if (!mediaFound) nentries.add(mediaListener.flattenToShortString());
+            if (!guardFound || !mediaFound) {
                 Settings.Secure.putString(context.getContentResolver(),
                         "enabled_notification_listeners", String.join(":", nentries));
             }
