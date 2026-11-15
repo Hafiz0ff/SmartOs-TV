@@ -682,6 +682,46 @@
                 android:nextFocusDown="@+id/grid" />
         </LinearLayout>
 
+        <!-- VK Video Continue Watching Shelf (2nd Row) -->
+        <LinearLayout
+            android:id="@+id/vkWatchNextSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="2dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/vkWatchNextHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="ПРОДОЛЖИТЬ ПРОСМОТР: VK ВИДЕО"
+                android:textColor="#B3FFFFFF"
+                android:textSize="11sp"
+                android:fontFamily="@string/font_medium"
+                android:letterSpacing="0.14"
+                android:textAllCaps="true" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vkWatchNextRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="4dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:descendantFocusability="afterDescendants"
+                android:nextFocusUp="@+id/watchNextRecycler"
+                android:nextFocusDown="@+id/grid" />
+        </LinearLayout>
+
         <!-- The wrapper clips at the grid's edge; the grid itself must not clip so scaled tiles can overflow their cells. -->
         <FrameLayout
             android:layout_width="match_parent"

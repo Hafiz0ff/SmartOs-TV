@@ -212,6 +212,9 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     private View watchNextSection;
     private RecyclerView watchNextRecycler;
     private WatchNextAdapter watchNextAdapter;
+    private View vkWatchNextSection;
+    private RecyclerView vkWatchNextRecycler;
+    private WatchNextAdapter vkWatchNextAdapter;
     private final java.util.concurrent.ExecutorService watchNextExecutor = java.util.concurrent.Executors.newSingleThreadExecutor();
     private List<RaceWeekend.Race> raceCalendar;
     private View racePanel;
@@ -641,6 +644,73 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             watchNextRecycler.setLayoutManager(new androidx.recyclerview.widget.LinearLayoutManager(this, androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL, false));
             watchNextRecycler.setAdapter(watchNextAdapter);
         }
+        watchNextAdapter.setVerticalKeyNavigation((v, position, keyCode) -> {
+            if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
+                View topBtn = findViewById(getFirstVisibleTopButtonId());
+                if (topBtn != null) {
+                    topBtn.requestFocus();
+                    return true;
+                }
+            } else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
+                if (vkWatchNextSection != null && vkWatchNextSection.getVisibility() == View.VISIBLE
+                        && vkWatchNextRecycler != null && vkWatchNextAdapter != null && vkWatchNextAdapter.getItemCount() > 0) {
+                    View child = vkWatchNextRecycler.getLayoutManager() != null ? vkWatchNextRecycler.getLayoutManager().findViewByPosition(0) : null;
+                    if (child == null) child = vkWatchNextRecycler.getChildAt(0);
+                    if (child != null) {
+                        child.requestFocus();
+                        return true;
+                    }
+                }
+                if (adapter != null && adapter.appCount() > 0) {
+                    focusTile(Math.max(0, Math.min(position, adapter.appCount() - 1)));
+                    return true;
+                }
+            }
+            return false;
+        });
+
+        vkWatchNextSection = findViewById(R.id.vkWatchNextSection);
+        vkWatchNextRecycler = findViewById(R.id.vkWatchNextRecycler);
+        vkWatchNextAdapter = new WatchNextAdapter(this, item -> {
+            MediaWatchService.Store.openContinueItem(this, item, () -> {
+                PackageManager pm = getPackageManager();
+                Intent intent = pm.getLeanbackLaunchIntentForPackage(item.pkg);
+                if (intent == null) intent = pm.getLaunchIntentForPackage(item.pkg);
+                if (intent != null) {
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
+            });
+        });
+        if (vkWatchNextRecycler != null) {
+            vkWatchNextRecycler.setLayoutManager(new androidx.recyclerview.widget.LinearLayoutManager(this, androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL, false));
+            vkWatchNextRecycler.setAdapter(vkWatchNextAdapter);
+        }
+        vkWatchNextAdapter.setVerticalKeyNavigation((v, position, keyCode) -> {
+            if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
+                if (watchNextSection != null && watchNextSection.getVisibility() == View.VISIBLE
+                        && watchNextRecycler != null && watchNextAdapter != null && watchNextAdapter.getItemCount() > 0) {
+                    int targetPos = Math.min(position, watchNextAdapter.getItemCount() - 1);
+                    View child = watchNextRecycler.getLayoutManager() != null ? watchNextRecycler.getLayoutManager().findViewByPosition(targetPos) : null;
+                    if (child == null) child = watchNextRecycler.getChildAt(0);
+                    if (child != null) {
+                        child.requestFocus();
+                        return true;
+                    }
+                }
+                View topBtn = findViewById(getFirstVisibleTopButtonId());
+                if (topBtn != null) {
+                    topBtn.requestFocus();
+                    return true;
+                }
+            } else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
+                if (adapter != null && adapter.appCount() > 0) {
+                    focusTile(Math.max(0, Math.min(position, adapter.appCount() - 1)));
+                    return true;
+                }
+            }
+            return false;
+        });
         MediaWatchService.ensureSessionTracking(this);
         refreshWatchNext();
         GuardKeep.ensureHomeKey(this);
@@ -2579,6 +2649,16 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     }
 
     private boolean focusWatchNextShelf() {
+        if (vkWatchNextSection != null && vkWatchNextSection.getVisibility() == View.VISIBLE
+                && vkWatchNextRecycler != null && vkWatchNextAdapter != null && vkWatchNextAdapter.getItemCount() > 0) {
+            View child = vkWatchNextRecycler.getLayoutManager() != null ? vkWatchNextRecycler.getLayoutManager().findViewByPosition(0) : null;
+            if (child == null) child = vkWatchNextRecycler.getChildAt(0);
+            if (child != null) {
+                child.requestFocus();
+                return true;
+            }
+            return vkWatchNextRecycler.requestFocus();
+        }
         if (watchNextSection != null && watchNextSection.getVisibility() == View.VISIBLE && watchNextRecycler != null && watchNextAdapter != null && watchNextAdapter.getItemCount() > 0) {
             View child = watchNextRecycler.getLayoutManager() != null ? watchNextRecycler.getLayoutManager().findViewByPosition(0) : null;
             if (child == null) child = watchNextRecycler.getChildAt(0);
@@ -3143,6 +3223,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         if (!shelfEnabled) {
             runOnUiThread(() -> {
                 if (watchNextSection != null) watchNextSection.setVisibility(View.GONE);
+                if (vkWatchNextSection != null) vkWatchNextSection.setVisibility(View.GONE);
                 int downId = R.id.grid;
                 if (btnInputs != null) btnInputs.setNextFocusDownId(downId);
                 if (btnWifi != null) btnWifi.setNextFocusDownId(downId);
@@ -3155,34 +3236,46 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         }
         watchNextExecutor.execute(() -> {
             List<WatchNextItem> items = MediaWatchService.Store.list(this);
+            List<WatchNextItem> vkItems = MediaWatchService.Store.listVk(this);
             runOnUiThread(() -> {
                 if (watchNextAdapter != null) {
                     watchNextAdapter.setItems(items);
                     ReleasesManager.prewarmShelfItems(this, items);
                 }
+                if (vkWatchNextAdapter != null) {
+                    vkWatchNextAdapter.setItems(vkItems);
+                }
                 boolean hasItems = items != null && !items.isEmpty();
+                boolean hasVkItems = vkItems != null && !vkItems.isEmpty();
+
                 if (watchNextSection != null) {
                     watchNextSection.setVisibility(hasItems ? View.VISIBLE : View.GONE);
                 }
+                if (vkWatchNextSection != null) {
+                    vkWatchNextSection.setVisibility(hasVkItems ? View.VISIBLE : View.GONE);
+                }
+
                 TextView header = findViewById(R.id.watchNextHeader);
                 if (header != null && hasItems) {
-                    boolean hasContinue = false;
-                    for (WatchNextItem it : items) {
-                        if (it.pkg != null && !it.pkg.isEmpty()) {
-                            hasContinue = true;
-                            break;
-                        }
-                    }
-                    if (hasContinue) {
-                        header.setText("ПРОДОЛЖИТЬ ПРОСМОТР И РЕКОМЕНДАЦИИ");
-                    } else {
-                        header.setText("РЕКОМЕНДАЦИИ И НОВИНКИ КИНО");
-                    }
+                    header.setText("РЕКОМЕНДАЦИИ И НОВИНКИ КИНО");
+                }
+                TextView vkHeader = findViewById(R.id.vkWatchNextHeader);
+                if (vkHeader != null && hasVkItems) {
+                    vkHeader.setText("ПРОДОЛЖИТЬ ПРОСМОТР: VK ВИДЕО");
+                }
+
+                if (watchNextRecycler != null) {
+                    watchNextRecycler.setNextFocusDownId(hasVkItems ? R.id.vkWatchNextRecycler : R.id.grid);
+                }
+                if (vkWatchNextRecycler != null) {
+                    vkWatchNextRecycler.setNextFocusUpId(hasItems ? R.id.watchNextRecycler : getFirstVisibleTopButtonId());
+                    vkWatchNextRecycler.setNextFocusDownId(R.id.grid);
                 }
                 if (grid != null) {
-                    grid.setNextFocusUpId(hasItems ? R.id.watchNextRecycler : getFirstVisibleTopButtonId());
+                    int upId = hasVkItems ? R.id.vkWatchNextRecycler : (hasItems ? R.id.watchNextRecycler : getFirstVisibleTopButtonId());
+                    grid.setNextFocusUpId(upId);
                 }
-                int downId = hasItems ? R.id.watchNextRecycler : R.id.grid;
+                int downId = hasItems ? R.id.watchNextRecycler : (hasVkItems ? R.id.vkWatchNextRecycler : R.id.grid);
                 if (btnInputs != null) btnInputs.setNextFocusDownId(downId);
                 if (btnWifi != null) btnWifi.setNextFocusDownId(downId);
                 if (btnBluetooth != null) btnBluetooth.setNextFocusDownId(downId);

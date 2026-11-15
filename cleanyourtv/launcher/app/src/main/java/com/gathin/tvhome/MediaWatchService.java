@@ -316,7 +316,7 @@ public class MediaWatchService extends NotificationListenerService {
         }
 
         static synchronized void record(Context c, String pkg, MediaMetadata m, PlaybackState s, CharSequence queueTitle) {
-            if (pkg == null || pkg.equals(c.getPackageName()) || "com.android.bluetooth".equals(pkg)) return;
+            if (pkg == null || pkg.equals(c.getPackageName()) || "com.android.bluetooth".equals(pkg) || isVlcPkg(pkg)) return;
             String title = "";
             String sub = "";
             long dur = 0L;
@@ -453,6 +453,7 @@ public class MediaWatchService extends NotificationListenerService {
                     JSONObject o = a.optJSONObject(i);
                     if (o == null) continue;
                     String pkg = o.optString("pkg");
+                    if (isVkPkg(pkg) || isVlcPkg(pkg)) continue; // Reserved exclusively for Row 2 (VK Video) or filtered
                     long ts = o.optLong("ts", 0L);
                     if (ts > 0 && now - ts > EXPIRE_MS) continue;
 
@@ -481,7 +482,7 @@ public class MediaWatchService extends NotificationListenerService {
                 List<WatchNextItem> tvProviderItems = queryTvProviderWatchNext(c, 8);
                 for (WatchNextItem item : tvProviderItems) {
                     if (out.size() >= MAX) break;
-                    if (!seenKeys.contains(item.key) && isInstalled(pm, item.pkg)) {
+                    if (!isVkPkg(item.pkg) && !isVlcPkg(item.pkg) && !seenKeys.contains(item.key) && isInstalled(pm, item.pkg)) {
                         seenKeys.add(item.key);
                         out.add(item);
                     }
@@ -501,6 +502,67 @@ public class MediaWatchService extends NotificationListenerService {
             }
 
             return out;
+        }
+
+        public static List<WatchNextItem> listVk(Context c) {
+            List<WatchNextItem> out = new ArrayList<>();
+            if (c == null) return out;
+            Set<String> seenKeys = new HashSet<>();
+            PackageManager pm = c.getPackageManager();
+            JSONArray a = read(c);
+            long now = System.currentTimeMillis();
+
+            for (int i = 0; i < a.length() && out.size() < MAX; i++) {
+                JSONObject o = a.optJSONObject(i);
+                if (o == null) continue;
+                String pkg = o.optString("pkg");
+                if (!isVkPkg(pkg)) continue;
+                long ts = o.optLong("ts", 0L);
+                if (ts > 0 && now - ts > EXPIRE_MS) continue;
+                if (!isInstalled(pm, pkg)) continue;
+
+                String key = o.optString("key");
+                if (seenKeys.contains(key)) continue;
+                seenKeys.add(key);
+
+                WatchNextItem item = new WatchNextItem();
+                item.key = key;
+                item.pkg = pkg;
+                item.appName = getAppName(pm, pkg);
+                item.title = o.optString("title");
+                item.sub = o.optString("sub");
+                item.art = o.optString("art");
+                item.link = o.optString("link");
+                item.pos = o.optLong("pos", -1L);
+                item.dur = o.optLong("dur", 0L);
+                item.progress = item.dur > 0 && item.pos > 0 ? Math.min(1.0f, (float) item.pos / (float) item.dur) : -1.0f;
+                item.engagementTs = ts;
+                out.add(item);
+            }
+
+            // Also check Android TV TvProvider watch_next_program for VK items
+            List<WatchNextItem> tvProviderItems = queryTvProviderWatchNext(c, 8);
+            for (WatchNextItem item : tvProviderItems) {
+                if (out.size() >= MAX) break;
+                if (isVkPkg(item.pkg) && !seenKeys.contains(item.key) && isInstalled(pm, item.pkg)) {
+                    seenKeys.add(item.key);
+                    out.add(item);
+                }
+            }
+
+            return out;
+        }
+
+        public static boolean isVkPkg(String pkg) {
+            if (pkg == null) return false;
+            String p = pkg.toLowerCase(java.util.Locale.ROOT);
+            return p.contains("vkvideo") || p.equals("com.vk.tv") || p.equals("org.xjiop.vkvideoapp") || p.contains("vk.tv");
+        }
+
+        public static boolean isVlcPkg(String pkg) {
+            if (pkg == null) return false;
+            String p = pkg.toLowerCase(java.util.Locale.ROOT);
+            return p.contains("videolan") || p.contains("vlc");
         }
 
         private static List<WatchNextItem> queryTvProviderWatchNext(Context c, int max) {
@@ -677,7 +739,8 @@ public class MediaWatchService extends NotificationListenerService {
         static boolean isYouTubePkg(String pkg) {
             if (pkg == null) return false;
             String p = pkg.toLowerCase(java.util.Locale.ROOT);
-            return p.contains("youtube") || p.contains("smarttube") || p.contains("teamsmart.videomanager");
+            return p.contains("youtube") || p.contains("smarttube") || p.contains("teamsmart.videomanager")
+                    || p.contains("tizentube") || p.contains("cobalt");
         }
 
         static String extractYouTubeVideoId(String raw) {

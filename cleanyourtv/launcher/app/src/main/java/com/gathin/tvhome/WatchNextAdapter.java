@@ -33,8 +33,17 @@ public class WatchNextAdapter extends RecyclerView.Adapter<WatchNextAdapter.View
         void onItemClick(WatchNextItem item);
     }
 
+    public interface OnVerticalKeyNavigation {
+        boolean onVerticalKey(View itemView, int position, int keyCode);
+    }
+
     private final Context context;
     private final OnItemClickListener listener;
+    private OnVerticalKeyNavigation verticalNavListener;
+
+    public void setVerticalKeyNavigation(OnVerticalKeyNavigation l) {
+        this.verticalNavListener = l;
+    }
     private final List<WatchNextItem> items = new ArrayList<>();
     private final ExecutorService imageExecutor = Executors.newFixedThreadPool(2);
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
@@ -100,6 +109,13 @@ public class WatchNextAdapter extends RecyclerView.Adapter<WatchNextAdapter.View
         });
 
         holder.itemView.setOnKeyListener((v, keyCode, event) -> {
+            if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN || keyCode == KeyEvent.KEYCODE_DPAD_UP) {
+                    if (verticalNavListener != null && verticalNavListener.onVerticalKey(v, holder.getBindingAdapterPosition(), keyCode)) {
+                        return true;
+                    }
+                }
+            }
             if (event.getAction() == KeyEvent.ACTION_UP &&
                     (keyCode == KeyEvent.KEYCODE_DPAD_CENTER || keyCode == KeyEvent.KEYCODE_ENTER || keyCode == KeyEvent.KEYCODE_NUMPAD_ENTER)) {
                 if (listener != null) listener.onItemClick(item);
