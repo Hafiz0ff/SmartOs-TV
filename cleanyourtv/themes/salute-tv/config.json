@@ -20,6 +20,14 @@
     "ru.sberdevices.starmarket=Каталог Сбера",
     "ru.sberdevices.settings=Центр управления"
   ],
+  "app_banners": [
+    "org.audioknigi.nova=banner_audioknigi",
+    "com.cultraview.newfilemanager=banner_filemanager",
+    "com.raccoon.hdrezkav2=banner_hdrezka",
+    "ru.iptvremote.android.iptv.pro=banner_iptv",
+    "mobi.zona=banner_zona",
+    "org.trackertv.player=banner_kinotrek"
+  ],
   "columns": 6,
   "rows_below_dock": 0,
   "background_color": "#05070C",

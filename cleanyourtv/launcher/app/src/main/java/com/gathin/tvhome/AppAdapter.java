@@ -9,11 +9,13 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Outline;
 import android.graphics.PixelFormat;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
@@ -356,9 +358,17 @@ public class AppAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         return new android.graphics.drawable.BitmapDrawable(ctx.getResources(), bmp);
     }
 
-    /** A banner_* drawable bundled with the launcher, or null for none or a name that is not one. */
+    /** A banner_* drawable bundled with the launcher or placed in external files/banners/, or null. */
     private Drawable bundledBanner(String name) {
         if (name == null || !name.startsWith("banner_")) return null;
+        java.io.File dir = ctx.getExternalFilesDir(null);
+        if (dir != null) {
+            java.io.File ext = new java.io.File(dir, "banners/" + name + ".png");
+            if (ext.isFile()) {
+                Bitmap bmp = BitmapFactory.decodeFile(ext.getAbsolutePath());
+                if (bmp != null) return new BitmapDrawable(ctx.getResources(), bmp);
+            }
+        }
         int id = ctx.getResources().getIdentifier(name, "drawable", ctx.getPackageName());
         return id != 0 ? ctx.getDrawable(id) : null;
     }
