@@ -1,18 +1,16 @@
 {
   "dock_apps": [
-    "org.xjiop.vkvideoapp",
+    "com.vk.tv",
     "io.gh.reisxd.tizentube.cobalt",
     "ru.iptvremote.android.iptv.pro",
-    "studio.scillarium.ottnavigator",
     "com.raccoon.hdrezkav2",
-    "ru.ivi.client.global"
+    "ru.ivi.client.global",
+    "mobi.zona"
   ],
   "app_labels": [
     "io.gh.reisxd.tizentube.cobalt=YouTube",
     "com.vk.tv=VK Видео",
-    "org.xjiop.vkvideoapp=VK Видео",
     "ru.iptvremote.android.iptv.pro=IPTV",
-    "studio.scillarium.ottnavigator=OTT Navigator",
     "com.raccoon.hdrezkav2=HDRezka",
     "ru.rutube.app=Rutube",
     "ru.ivi.client=Иви",
@@ -22,12 +20,11 @@
     "ru.sberdevices.settings=Центр управления"
   ],
   "app_banners": [
-    "org.xjiop.vkvideoapp=banner_vk",
+    "com.vk.tv=banner_vk",
     "org.audioknigi.nova=banner_audioknigi",
     "com.cultraview.newfilemanager=banner_filemanager",
     "com.raccoon.hdrezkav2=banner_hdrezka",
     "ru.iptvremote.android.iptv.pro=banner_iptv",
-    "studio.scillarium.ottnavigator=banner_ottnavigator",
     "mobi.zona=banner_zona",
     "org.trackertv.player=banner_kinotrek"
   ],
