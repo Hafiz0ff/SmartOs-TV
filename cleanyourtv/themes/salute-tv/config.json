@@ -20,7 +20,6 @@
     "ru.sberdevices.settings=Центр управления"
   ],
   "app_banners": [
-    "com.vk.tv=banner_vk",
     "org.audioknigi.nova=banner_audioknigi",
     "com.cultraview.newfilemanager=banner_filemanager",
     "com.raccoon.hdrezkav2=banner_hdrezka",
