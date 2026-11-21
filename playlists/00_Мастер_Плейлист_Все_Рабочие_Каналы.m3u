@@ -194,8 +194,6 @@ https://live-vgtrksmotrim.cdnvideo.ru/vgtrksmotrim/smotrim-live-01.smil/playlist
 http://hls-tvsoyuz.cdnvideo.ru/tvsoyuz/soyuz/playlist.m3u8
 #EXTINF:-1 tvg-id="spas" tvg-logo="https://ngrch.github.io/iptv/logos/spas.png" group-title="📺 Федеральные и основные",Спас
 https://zabava-htlive.cdn.ngenix.net/hls/CH_SPAS/variant.m3u8
-#EXTINF:-1 tvg-id="spas" tvg-logo="https://ngrch.github.io/iptv/logos/spas.png" group-title="📺 Федеральные и основные",Спас (2)
-https://bonusspas.mediacdn.ru/cdn/spas/playlist.m3u8
 #EXTINF:-1 tvg-id="spas-pl2" tvg-logo="https://ngrch.github.io/iptv/logos/spas.png" group-title="📺 Федеральные и основные",Спас +2
 https://zabava-htlive.cdn.ngenix.net/hls/CH_SPAS_2/variant.m3u8
 #EXTINF:-1 tvg-id="spas-pl7" tvg-logo="https://ngrch.github.io/iptv/logos/spas.png" group-title="📺 Федеральные и основные",Спас +7
@@ -244,8 +242,6 @@ https://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_2/variant.m3u8
 https://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_4/variant.m3u8
 #EXTINF:-1 tvg-id="tv3-ru-pl7" tvg-logo="https://ngrch.github.io/iptv/logos/tv3.png" group-title="📺 Федеральные и основные",ТВ3 +7
 https://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_7/variant.m3u8
-#EXTINF:-1 group-title="📺 Федеральные и основные",Твоё ТВ Юмор
-http://tvoetv.space:8080/tvoetv_humor/index.m3u8
 #EXTINF:-1 tvg-id="tnt" tvg-logo="https://ngrch.github.io/iptv/logos/tnt.png" group-title="📺 Федеральные и основные",ТНТ
 https://zabava-htlive.cdn.ngenix.net/hls/CH_TNT/variant.m3u8
 #EXTINF:-1 tvg-id="tnt" tvg-logo="https://ngrch.github.io/iptv/logos/tnt.png" group-title="📺 Федеральные и основные",ТНТ (3)
@@ -372,18 +368,26 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/510/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/556/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Amedia Premium
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/555/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Ani
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/129/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Atreseries HD ES
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31882/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",AXN HD ES
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31877/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",AXN Movies HD ES
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32348/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Baby Time
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20030/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/lW3WIBD.png" group-title="🎬 Фильмы и сериалы",Baby Time (576p)
 http://178.134.1.158:8081/babytime/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Baby TV ES
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31838/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Baragozz
 https://kinowalk.hopto.org/baragozz_tv_live
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",BCU Comedy HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15026/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",BCU Little HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19425/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",BCU Marvel HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15025/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",BCU Media HD OLD
@@ -400,6 +404,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17020/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17054/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Blockbusters Time
 https://kinowalk.hopto.org/blockbusterstime_live
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Boing HD ES
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31839/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",BOX Anime HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19276/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",BOX Apocalypse HD
@@ -440,8 +446,14 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32305/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32306/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Calle 13 HD ES
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31836/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Cartoon Classics
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2075/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Cartoon Network
 https://bl.rutube.ru/livestream/d2119cfb95146b3983cf05c1fe35e66f/index.m3u8?s=SBAsUrxODR6nk6ktHKTpoQ&e=2090795468&scheme=https
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Cartoon Network HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/143/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Cartoonito
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/723/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Channel 4 HD UK
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32330/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",ChowAmigo
@@ -462,6 +474,12 @@ https://kinowalk.hopto.org/cinematime_live
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11004/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",CineMan Action
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11006/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",CineMan Cartoons 90
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11001/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",CineMan Cartoons Big
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11003/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",CineMan Cartoons Short
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11002/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",CineMan Marvel
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11009/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",CineMan MiniSeries
@@ -518,8 +536,18 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/16051/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32279/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",D1 HD UA
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31798/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Da Vinci HD UA
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31799/index.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Da Vinci orig
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/1033/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Diema BG
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32308/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Disney Channel HD FR
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15185/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Disney Jr. HD ES
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31840/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Divi Sport HD UA
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31800/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",dj Zour
 https://kinowalk.hopto.org/zsmedia_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Ducktv (2)
@@ -586,8 +614,12 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/6107/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19216/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",FX Life
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/9232/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Geo Super PK
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32295/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",grislytoe
 https://kinowalk.hopto.org/grislytoe_live
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Gulli Girl
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/109/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",HBO Max Avances HD ES
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32346/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",HGTN
@@ -598,14 +630,22 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/557/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2151/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",IGROComp
 https://kinowalk.hopto.org/igrocomp_live
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",JimJam
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/138/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",JTX
 https://kinowalk.hopto.org/jtxonline_live
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Kids TV HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20008/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",KidZone Max HD LT
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32283/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Kino Jam
 https://kinowalk.hopto.org/kinojam_live
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",KinoJam 1 HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/7260/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",KinoJam 2 HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/7261/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",KinoKazka
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15019/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Kinolampa
 https://kinowalk.hopto.org/kinolampa_live
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",KinoLiving
@@ -618,6 +658,8 @@ https://kinowalk.hopto.org/dak3767_live
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31816/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Kinowalk
 https://kinowalk.hopto.org/kinowalk_live
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Kinowood HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31817/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Kira_freak
 https://kinowalk.hopto.org/kirafreak_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Kycman
@@ -628,6 +670,8 @@ https://kinowalk.hopto.org/lampotv_live
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15087/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Liberty Боевики FHD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15096/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Liberty Дисней FHD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15093/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Liberty Кино UKR FHD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31660/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Liberty Комедии FHD
@@ -638,6 +682,10 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15091/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15090/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Liberty Мелодрамы FHD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15095/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Liberty Мульт UKR FHD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31659/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Liberty Пиксар FHD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15092/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Liberty Сваты FHD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15164/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Liberty Сериалы FHD
@@ -836,8 +884,22 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19408/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19411/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",MYTV HIT
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19410/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",MYTV Kids
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19409/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",NEZABUDKA
 https://kinowalk.hopto.org/nezabudka_live
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Nick Jr.
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/114/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Nick Jr. HD ES
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31852/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Nickelodeon
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/541/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Nickelodeon HD ES
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31846/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",NickToons HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/849/index.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",NickToons SE
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/6095/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",NikNik
 https://hostrec.ru/live/wic2AtEFCLwsZcUkAgtZcjlYgjc.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",NOW Series HD
@@ -850,6 +912,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19398/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11102/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",PG VHS HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15000/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Polsat JimJam PL
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/7298/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Priest_kod
 https://kinowalk.hopto.org/priest_kod_live
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Raz 3 HD UA
@@ -890,8 +954,6 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32347/index.m3u8
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=4158
 #EXTINF:-1 tvg-logo="https://i.imgur.com/5sis895.png" group-title="🎬 Фильмы и сериалы",Star Cinema
 https://dash2.antik.sk/live/test_star_cinema_atktv/playlist.m3u8
-#EXTINF:-1 group-title="🎬 Фильмы и сериалы",Star Family
-https://dash2.antik.sk/live/test_star_family_atktv/playlist.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Start Air HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/18036/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",StrahTV The X-Files
@@ -906,6 +968,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11060/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31714/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",StrahTV Коломбо
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31713/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",StrahTV Кроха ТВ
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11066/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",StrahTV Однажды в милиции
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31715/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",StrahTV Ольга HD
@@ -918,6 +982,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11062/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11061/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",StrahTV Страх 2.0 HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31720/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",StrahTV Том и Джерри
+http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31721/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",StrahTV Универ ТВ
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11063/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",StrahTV Фантастика 2.0 HD
@@ -932,6 +998,8 @@ https://kinowalk.hopto.org/swat2k_live
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31880/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",TCM HD ES
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31883/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Tiji TV
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/108/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",TimeToHorror
 https://kinowalk.hopto.org/timetohorror_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",TimeToMovie
@@ -964,8 +1032,6 @@ http://185.221.213.254:8080/Mafia2/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/18072/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Tviksel Детское кино HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/18073/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Tviksel Детское кино International
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/18074/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Tviksel Кино 1 HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/18069/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Tviksel Кино 1 International
@@ -982,6 +1048,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32256/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31762/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VeleS 60fps
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31637/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VeleS Kids
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31646/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VeleS Movie Hits
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31644/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VeleS Premiere
@@ -996,6 +1064,90 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31645/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31643/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VeleS Страшное
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31642/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV 101 далматинец
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30198/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Peppa Pig
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30159/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Аладдин
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30194/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Барбоскины
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30195/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Бивис и Батт-Хед
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30193/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Воскресное утро 90х
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30152/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Вспыш и чудо-машинки
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30155/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Вуди Вудпекер
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30154/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Гриффины
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30187/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Губка Боб
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30186/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Даша-путешественница
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30181/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Енотки. Первые слова
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30189/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Еноты
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30188/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Корги по имени Моко
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30184/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Крепыш и команда
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30183/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Леди Баг и Супер-Кот
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30182/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Маша и Медведь
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30180/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Микки Маус
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30179/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Мини-мишки
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30178/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Мишки Гамми
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30177/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Ну, погоди!
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30161/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Охотники за привидениями
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30175/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Очень странные делишки
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30176/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Панда и Антилопа
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30174/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Подводная одиссея
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30196/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Простоквашино
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30160/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Пчёлка Майя
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30173/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Рапунцель
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30172/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Рик и Морти
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30171/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Розовая пантера
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30170/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Свинка Пеппа
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30158/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Симпсоны
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30169/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Смешарики
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30168/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Смурфики
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30166/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Суперкрошки
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30165/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Тимон и Пумба
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30164/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Три кота
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30157/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Утиные истории
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30156/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Фиксики
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30153/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Чудеса на виражах
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30192/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Щенячий патруль
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30167/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Venera.TV Экстрасенсы
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30190/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Vesna HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2037/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",VF Adventure
@@ -1016,6 +1168,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/18101/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/13092/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Detective
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11120/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Disney Cartoon
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15027/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Disney Movie
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15010/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",VF Family
@@ -1078,6 +1232,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17009/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17016/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Друзья
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17006/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Ералаш
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14163/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Игра престолов
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/18119/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Индия
@@ -1108,6 +1264,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17000/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11123/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",VF Мосфильм
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/10084/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Мультуб
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15520/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",VF Мультфильмы СССР
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/10086/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Мыльные оперы
@@ -1116,6 +1274,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/13088/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/10083/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Наша Раша
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17010/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Новогодние мультфильмы
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15523/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Новогодний
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17035/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Одесская киностудия
@@ -1148,10 +1308,14 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14224/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/13087/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",VF Сериалы Турции
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/9123/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Скуби-Ду
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17007/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF След
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/13086/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Солдаты
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/13081/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Союзмультфильм
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14238/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",VF Счастливы Вместе
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/9242/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",VF Тайны следствия
@@ -1234,6 +1398,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20165/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20164/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Grand
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14171/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Kids
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14173/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Music Hits
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14179/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Netflix
@@ -1252,10 +1418,14 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14234/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14235/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Мелодрама
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19434/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Наше Детское
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19433/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Русские Фильмы
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14174/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Советские Фильмы
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14175/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Союзмульт
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14178/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Yosso TV Трагичное
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14219/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Z!Action HD
@@ -1296,8 +1466,16 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31693/index.m3u8
 https://kinowalk.hopto.org/apricus_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Андийцы
 https://v2.catcast.tv/content/34114/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Армія TV HD UA
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31771/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Арт
 http://185.23.80.23:8080/ART/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",В гостях у сказки
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/737/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",В гостях у сказки HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20005/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Весёлые малыши HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31918/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Видеокассета
 https://kinowalk.hopto.org/vhs90e_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",ВсеТВ
@@ -1308,6 +1486,10 @@ https://zabava-htlive.cdn.ngenix.net/hls/CH_VSETVHD/variant.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31772/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Госфильмофонд. Машина времени HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31929/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Детский
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/730/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Детский мир
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/543/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Детское кино
 https://kino-1.catcast.tv/content/40427/index.m3u8
 #EXTINF:-1 tvg-id="domkino" tvg-logo="https://ngrch.github.io/iptv/logos/dom_kino.png" group-title="🎬 Фильмы и сериалы",Дом Кино
@@ -1360,14 +1542,32 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2038/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/146/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Индия
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/1001/index.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Капитан Фантастика HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2098/index.m3u8
 #EXTINF:-1 tvg-id="karusel" tvg-logo="https://ngrch.github.io/iptv/logos/karusel.png" group-title="🎬 Фильмы и сериалы",Карусель
 https://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL/variant.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Карусель
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/156/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Карусель (Ставрополь)
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31930/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Карусель +0 (Элиста)
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15453/index.m3u8
 #EXTINF:-1 tvg-id="karusel-pl2" tvg-logo="https://ngrch.github.io/iptv/logos/karusel.png" group-title="🎬 Фильмы и сериалы",Карусель +2
 https://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_2/variant.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Карусель +3
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/740/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Карусель +3 (Омск)
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15436/index.m3u8
 #EXTINF:-1 tvg-id="karusel-pl4" tvg-logo="https://ngrch.github.io/iptv/logos/karusel.png" group-title="🎬 Фильмы и сериалы",Карусель +4
 https://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_4/variant.m3u8
 #EXTINF:-1 tvg-id="karusel-pl7" tvg-logo="https://ngrch.github.io/iptv/logos/karusel.png" group-title="🎬 Фильмы и сериалы",Карусель +7
 https://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_7/variant.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Карусель +7
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15442/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Карусель +7 (Владивосток)
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15340/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Карусель HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20012/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Кинеко
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/550/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Кино 1 International
@@ -1376,10 +1576,6 @@ https://kino-1.catcast.tv/content/38617/index.m3u8
 http://176.118.197.101/KinoTvHD/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Кино ТВ
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/732/index.m3u8
-#EXTINF:-1 group-title="🎬 Фильмы и сериалы",КиноАзия
-https://cityeden.catcast.tv/content/34393/index.m3u8
-#EXTINF:-1 group-title="🎬 Фильмы и сериалы",КиноДрама
-https://cityeden.catcast.tv/content/45269/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Кинозал 1 (Триколор)
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2568/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Кинозал 2 (Триколор)
@@ -1392,8 +1588,6 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2571/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2572/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Кинозал 6 (Триколор)
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2573/index.m3u8
-#EXTINF:-1 group-title="🎬 Фильмы и сериалы",КиноКлассика
-https://cityeden.catcast.tv/content/34185/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Кинокомедия
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/145/index.m3u8
 #EXTINF:-1 tvg-id="kinokomedia" tvg-logo="https://ngrch.github.io/iptv/logos/kinokomedia.png" group-title="🎬 Фильмы и сериалы",Кинокомедия (2)
@@ -1412,10 +1606,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/509/index.m3u8
 http://176.118.197.101/Kinomix/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Киномикс HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/7249/index.m3u8
-#EXTINF:-1 group-title="🎬 Фильмы и сериалы",КиноМистика
-https://cityeden.catcast.tv/content/40783/index.m3u8
-#EXTINF:-1 group-title="🎬 Фильмы и сериалы",Кинопоказ (3)
-http://176.118.197.101/Kinopokaz/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",КиноМульт
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20009/index.m3u8
 #EXTINF:-1 tvg-id="kinopremiera-hd" tvg-logo="https://ngrch.github.io/iptv/logos/kinopremiera.png" group-title="🎬 Фильмы и сериалы",Кинопремьера (2)
 http://185.121.1.163:8083/Kinopremyera/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Киносвидание
@@ -1438,8 +1630,6 @@ http://176.118.197.101/Kinoseria/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/516/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Кинохит HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/7250/index.m3u8
-#EXTINF:-1 group-title="🎬 Фильмы и сериалы",КиноЭкшен
-https://cityeden.catcast.tv/content/41333/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Кладовая Фильмов
 https://kinowalk.hopto.org/skladfilm_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Классика Кино
@@ -1456,6 +1646,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2034/index.m3u8
 http://176.118.197.101/LubimoeKino/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Любимое Кино
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/722/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Лёва HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15098/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Миллет HD (Крым)
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19258/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Мир Ехо
@@ -1472,6 +1664,16 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17022/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/7347/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Мужское Кино
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/164/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Мульт
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/909/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Мульт HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/921/index.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Мультиландия
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/5055/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Мультиландия HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31910/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Мультимузыка
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/749/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Мультфильмы VHS
 https://kinowalk.hopto.org/myvhs_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Мы из 90-х
@@ -1492,6 +1694,8 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/744/index.m3u8
 https://cdn.ntv.ru/th_hit/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",НТВ Хит
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/741/index.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",О!
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/727/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Осторожно Модерн
 https://kinowalk.hopto.org/ostorozhnomodern2_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Первый ряд
@@ -1504,6 +1708,8 @@ https://streaming.thestream.cyou/live/43.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/7222/index.m3u8
 #EXTINF:-0 group-title="🎬 Фильмы и сериалы",Пёс
 https://cdn-dvr.ntv.ru/Pes/tracks-v1a1/rewind-240.ts.m3u8
+#EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Радость моя
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/853/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Ретро
 http://176.118.197.101/Retro/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Ретро
@@ -1512,8 +1718,6 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2018/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31743/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Родное Кино
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/126/index.m3u8
-#EXTINF:-1 group-title="🎬 Фильмы и сериалы",Родное кино (3)
-http://176.118.197.101/RodnoeKino/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Русский бестселлер
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/905/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Русский детектив
@@ -1522,12 +1726,18 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/907/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/547/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Русский роман
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/906/index.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Рыжий
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2052/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Сапфир
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/553/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Сказки Зайки HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14150/index.m3u8
 #EXTINF:-0 group-title="🎬 Фильмы и сериалы",Скорая помощь
 https://cdn-dvr.ntv.ru/Skoraja_pomosh/tracks-v1a1/rewind-240.ts.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Смайл (2)
 https://5d23269b3ec0c.streamlock.net/WEB_Smilik/Smilik.stream/index.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Смайл ТВ HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2157/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Советская киноклассика HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2146/index.m3u8
 #EXTINF:-1 tvg-id="solnce" tvg-logo="https://ngrch.github.io/iptv/logos/solnce.png" group-title="🎬 Фильмы и сериалы",Солнце
@@ -1546,16 +1756,24 @@ http://194.26.229.213/souzmultfilm/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/7247/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",СТС Love
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/103/index.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",СуперГерои
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/1041/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",СуперГерои HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15099/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Суспільне Крим HD UA
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31746/index.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Тамыр (Уфа)
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2109/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",ТВ 21
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/525/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Твое ТВ HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14229/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Терра UA
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31753/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",ТипТоп HD
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14007/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Тооку
 http://live-saha.cdnvideo.ru/saha/tooky/playlist.m3u8
+#EXTINF:0 tvg-rec="3" group-title="🎬 Фильмы и сериалы",Тооку (Якутия)
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/9172/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Тоха Киноман
 https://kinowalk.hopto.org/kinomania_stream_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Тоха Стрим
@@ -1566,6 +1784,8 @@ https://kinowalk.hopto.org/ddator_live
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31724/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Українське радіо 3 UA
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31725/index.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Уніaн Серіал UA
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31726/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Фауна UA
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31727/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎬 Фильмы и сериалы",Феникс плюс Кино
@@ -1578,6 +1798,8 @@ https://kinowalk.hopto.org/durkalive_live
 http://194.26.229.213/chip-n-dale-rescue-rangers/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Шаян
 http://s45177.cdn.ngenix.net/hls/CH_R03_SHAYNTV/variant.m3u8
+#EXTINF:0 tvg-rec="0" group-title="🎬 Фильмы и сериалы",Шаян ТВ (Татарстан)
+http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32216/index.m3u8
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Эквилибриум
 https://kinowalk.hopto.org/equilibrium_live
 #EXTINF:-1 group-title="🎬 Фильмы и сериалы",Эра VHS
@@ -1598,8 +1820,6 @@ https://strhls.streamakaci.tv/ortb/ortb2-multi/playlist.m3u8
 https://africa24.vedge.infomaniak.com/livecast/ik:africa24sport/manifest.m3u8
 #EXTINF:-1 tvg-id="AmericanNinjaWarrior.us@SD" tvg-logo="https://raw.githubusercontent.com/RoqueDJ/iptv-svg/main/1792421696158.png" group-title="⚽ Спортивные",American Ninja Warrior (1080p)
 https://d4whmvwm0rdvi.cloudfront.net/10007/99951318/hls/master.m3u8?ads.xumo_channelId=99951318&ads.asnw=169843&ads.afid=405342864&ads.sfid=19647852&ads.csid=xumo_web_NBCUAmericanNinjaWarrior_ssai_cro&ads._fw_is_lat=0&ads._fw_us_privacy=&ads._fw_coppa=0&ads._fw_did=a5090924-15b1-4b7f-b6cd-2f06e2ba51e1&ads._fw_vcid2=512116:a5090924-15b1-4b7f-b6cd-2f06e2ba51e1&ads._fw_app_bundle=web.xumo.com&ads._fw_app_store_url=&ads._fw_content_category=&ads._fw_content_genre=&ads._fw_content_language=en&ads._fw_content_rating=&ads._fw_deviceMake=GitHubAction&ads._fw_device_model=PythonScript&ads._fw_deviceType=3-Connected_TV&ads.appVersion=1.0.0&ads.appName=XumoPlay&ads.xumo_contentId=4063&ads.xumo_contentName=NBCUAmericanNinjaWarrior&ads.xumo_providerId=4063&ads.xumo_providerName=NBCUAmericanNinjaWarrior&ads.channelId=99951318
-#EXTINF:-1 tvg-id="AntenaSport.ro@SD" tvg-logo="https://cdn.as.ro/wp-content/themes/antenasport/images/icons-as/as.svg" group-title="⚽ Спортивные",AntenaSport
-https://stream1.antenaplay.ro/as/AS.ro/chunklist.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Arena Esport HD RS
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31597/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Arena Fight HD RS
@@ -1760,8 +1980,6 @@ http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport8/live_fullhd?o
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2502/index.m3u8
 #EXTINF:-1 tvg-id="CanalPlusSportSK.sk@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/25/Canal%2B_Sport_2023.svg/revision/latest?cb=20230901182304" group-title="⚽ Спортивные",Canal+ Sport SK
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport/live_fullhd?offsetSeconds=0
-#EXTINF:-1 tvg-id="CBSSportsGolazoNetwork.us@SD" tvg-logo="https://i.imgur.com/eMjutHS.png" group-title="⚽ Спортивные",CBS Sports Golazo Network (720p)
-https://dai.google.com/linear/hls/event/7f3Wv6f7QEKfQna22jHqLQ/master.m3u8
 #EXTINF:-1 tvg-id="CBSSportsHQ.us@SD" tvg-logo="https://i.imgur.com/q8BENJg.png" group-title="⚽ Спортивные",CBS Sports HQ (720p)
 https://jmp2.uk/plu-5e9f2c05172a0f0007db4786.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",CBS Sports Network HD US
@@ -1934,8 +2152,6 @@ https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/19154/index.m3u8
 #EXTINF:-1 tvg-id="ESPNU.us@HD" tvg-logo="https://i.imgur.com/HiBrysh.png" group-title="⚽ Спортивные",ESPNU HD (720p)
 http://85.237.89.160:9590/usa-s/ESPN-U-HD/index.m3u8
-#EXTINF:-1 tvg-id="Esport3.es@Originals" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Esport3.svg/960px-Esport3.svg.png" group-title="⚽ Спортивные",Esport3 Originals (1080p) [Not 24/7]
-https://directes-tv-int.3catdirectes.cat/live-content/esport3-hls/master.m3u8
 #EXTINF:-1 group-title="⚽ Спортивные",Eurosport 1
 http://178.134.1.158:8081/eurosport/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="⚽ Спортивные",Eurosport 1
@@ -2014,8 +2230,6 @@ https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 https://cffda8ff.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c3dvbWVuX0hMUw/playlist.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Fight Network HD CA
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31960/index.m3u8
-#EXTINF:-1 tvg-id="FightBox.nl@SD" tvg-logo="https://i.imgur.com/mRsnztA.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="⚽ Спортивные",FightBox
-https://webtvstream.bhtelecom.ba/fightbox.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",FightBox HD
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31961/index.m3u8
 #EXTINF:-1 tvg-id="FightBox.nl@Poland" tvg-logo="https://i.imgur.com/mRsnztA.png" group-title="⚽ Спортивные",FightBox Poland (576i)
@@ -2200,8 +2414,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6541/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6544/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Setanta Sports 2 HD orig
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6542/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Setanta Sports HD UA
-http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31755/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Setanta Sports HD UA orig
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/15183/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Setanta Sports UA
@@ -2408,8 +2620,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2530/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31953/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",SportItalia Calcio HD IT
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/19108/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/ujS6mMo.png" group-title="⚽ Спортивные",Sportivnyy (1080p)
-https://live-3.otcnet.ru/sportivny/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="⚽ Спортивные",Star Sports 1 IN
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2508/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="⚽ Спортивные",Star Sports 2 IN
@@ -2548,8 +2758,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/870/index.m3u8
 https://bl.rutube.ru/livestream/cc1b56aa4955a144f324ad58998513bb/index.m3u8?s=5eCXZGvblic9uGykEPvBYw&e=2082370462&scheme=https
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Волейбол HD
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31920/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Живи Активно HD
-http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/15143/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="⚽ Спортивные",Матч ТВ
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/535/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Матч ТВ +0 (Белгород)
@@ -2620,8 +2828,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/14190/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/14191/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="⚽ Спортивные",Окко Футбол HD
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6554/index.m3u8
-#EXTINF:-1 group-title="⚽ Спортивные",Спорт
-http://live-3.otcnet.ru/sportivny/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="⚽ Спортивные",Старт FHD
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2154/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="⚽ Спортивные",Старт Триумф HD
@@ -2908,252 +3114,6 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/159/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20034/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🌍 Познавательные и наука",Усадьба
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/532/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Ani
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/129/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Baby Time
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20030/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Baby TV ES
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31838/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",BCU Little HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19425/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Boing HD ES
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31839/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Cartoon Classics
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2075/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Cartoon Network HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/143/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Cartoonito
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/723/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",CineMan Cartoons 90
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11001/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",CineMan Cartoons Big
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11003/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",CineMan Cartoons Short
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11002/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Da Vinci HD UA
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31799/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",Da Vinci orig
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/1033/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Disney Channel HD FR
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15185/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Disney Jr. HD ES
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31840/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Divi Sport HD UA
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31800/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Geo Super PK
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32295/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Gulli Girl
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/109/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",JimJam
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/138/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Kids TV HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20008/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",KidZone Max HD LT
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32283/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",KinoKazka
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15019/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Kinowood HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31817/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Liberty Дисней FHD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15093/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Liberty Мульт UKR FHD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31659/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Liberty Пиксар FHD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15092/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",MYTV Kids
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19409/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Nick Jr.
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/114/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Nick Jr. HD ES
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31852/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Nickelodeon
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/541/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Nickelodeon HD ES
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31846/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",NickToons HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/849/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",NickToons SE
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/6095/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Polsat JimJam PL
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/7298/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",StrahTV Кроха ТВ
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/11066/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",StrahTV Том и Джерри
-http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31721/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Tiji TV
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/108/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",VeleS Kids
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31646/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV 101 далматинец
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30198/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Peppa Pig
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30159/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Аладдин
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30194/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Барбоскины
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30195/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Бивис и Батт-Хед
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30193/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Воскресное утро 90х
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30152/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Вспыш и чудо-машинки
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30155/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Вуди Вудпекер
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30154/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Гриффины
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30187/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Губка Боб
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30186/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Даша-путешественница
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30181/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Енотки. Первые слова
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30189/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Еноты
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30188/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Корги по имени Моко
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30184/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Крепыш и команда
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30183/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Леди Баг и Супер-Кот
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30182/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Маша и Медведь
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30180/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Микки Маус
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30179/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Мини-мишки
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30178/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Мишки Гамми
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30177/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Ну, погоди!
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30161/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Охотники за привидениями
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30175/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Очень странные делишки
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30176/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Панда и Антилопа
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30174/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Подводная одиссея
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30196/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Простоквашино
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30160/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Пчёлка Майя
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30173/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Рапунцель
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30172/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Рик и Морти
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30171/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Розовая пантера
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30170/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Свинка Пеппа
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30158/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Симпсоны
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30169/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Смешарики
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30168/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Смурфики
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30166/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Суперкрошки
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30165/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Тимон и Пумба
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30164/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Три кота
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30157/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Утиные истории
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30156/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Фиксики
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30153/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Чудеса на виражах
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30192/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Щенячий патруль
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30167/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Venera.TV Экстрасенсы
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/30190/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",VF Disney Cartoon
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15027/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",VF Ералаш
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14163/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",VF Мультуб
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15520/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",VF Новогодние мультфильмы
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15523/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",VF Скуби-Ду
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17007/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",VF Союзмультфильм
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14238/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Yosso TV Kids
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14173/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Yosso TV Наше Детское
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/19433/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Yosso TV Союзмульт
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14178/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Армія TV HD UA
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31771/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",В гостях у сказки
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/737/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",В гостях у сказки HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20005/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Весёлые малыши HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31918/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Детский
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/730/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Детский мир
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/543/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",Капитан Фантастика HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2098/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Карусель
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/156/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Карусель (Ставрополь)
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31930/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Карусель +0 (Элиста)
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15453/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",Карусель +3
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/740/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Карусель +3 (Омск)
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15436/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Карусель +7
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15442/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Карусель +7 (Владивосток)
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15340/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Карусель HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20012/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",КиноМульт
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/20009/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Лёва HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15098/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Мульт
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/909/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Мульт HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/921/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",Мультиландия
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/5055/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Мультиландия HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31910/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Мультимузыка
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/749/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",О!
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/727/index.m3u8
-#EXTINF:0 tvg-rec="7" group-title="👶 Детские и мультфильмы",Радость моя
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/853/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",Рыжий
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2052/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Сказки Зайки HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14150/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",Смайл ТВ HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2157/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",СуперГерои
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/1041/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",СуперГерои HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/15099/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",Тамыр (Уфа)
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2109/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",ТипТоп HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/14007/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="👶 Детские и мультфильмы",Тооку (Якутия)
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/9172/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Уніaн Серіал UA
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31726/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="👶 Детские и мультфильмы",Шаян ТВ (Татарстан)
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32216/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎭 Развлекательные",2x2 HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/31913/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎭 Развлекательные",4seven UK
@@ -3278,8 +3238,6 @@ https://rt-mos-htlive.cdn.ngenix.net/hls/CH_R04_DOVERIE/variant.m3u8
 https://stream.smotrim.ru/hls2/doverie/playlist_3.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎭 Развлекательные",Мужской
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2047/index.m3u8
-#EXTINF:-1 group-title="🎭 Развлекательные",Ностальгия
-http://176.118.197.101/Nostalgiya/index.m3u8
 #EXTINF:-1 tvg-id="nst" tvg-logo="https://ngrch.github.io/iptv/logos/nst.png" group-title="🎭 Развлекательные",НСТ
 http://176.118.197.101/HCT/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎭 Развлекательные",НТВ Стиль
@@ -3410,8 +3368,6 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/840/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32092/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📰 Новости",RT English
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32238/index.m3u8
-#EXTINF:-1 group-title="📰 Новости",RT News
-http://rt-glb.rttv.com/dvr/rtnews/playlist.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📰 Новости",RTVi
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2086/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📰 Новости",Sky Sports News HD 50 UK
@@ -3704,8 +3660,6 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/16020/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/16072/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎵 Музыка",Kiss Kiss Italia HD
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/16073/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.knmusictv.com/wp-content/uploads/2026/01/LOGO2112.png" group-title="🎵 Музыка",KN Music TV
-https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9qJkxV9.png" group-title="🎵 Музыка",Live Music Channel HD (1080p)
 http://46.53.200.153:7777/play/Live_music_channel/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎵 Музыка",Maidan (Татарстан)
@@ -3826,8 +3780,6 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2142/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/2061/index.m3u8
 #EXTINF:-1 tvg-id="muztv" tvg-logo="https://ngrch.github.io/iptv/logos/muz_tv.png" group-title="🎵 Музыка",Муз ТВ
 https://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV/variant.m3u8
-#EXTINF:-1 tvg-id="muztv" tvg-logo="https://ngrch.github.io/iptv/logos/muz_tv.png" group-title="🎵 Музыка",Муз ТВ (4)
-https://streaming102.interskytech.com/live/618.m3u8
 #EXTINF:-1 tvg-id="muztv-pl2" tvg-logo="https://ngrch.github.io/iptv/logos/muz_tv.png" group-title="🎵 Музыка",Муз ТВ +2
 https://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_2/variant.m3u8
 #EXTINF:-1 tvg-id="muztv-pl4" tvg-logo="https://ngrch.github.io/iptv/logos/muz_tv.png" group-title="🎵 Музыка",Муз ТВ +4
@@ -3866,8 +3818,6 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32055/index.m3u8
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/32241/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎵 Музыка",Радио Хит HD (Орск)
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/17048/index.m3u8
-#EXTINF:0 tvg-rec="0" group-title="🎵 Музыка",Радио Шансон HD
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/16036/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="🎵 Музыка",РУ.ТВ
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/838/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="🎵 Музыка",РУ.ТВ orig
@@ -4334,8 +4284,6 @@ http://rt-sth-stavr-htlive.cdn.ngenix.net/hls/CH_R01_ATV/variant.m3u8
 https://bl.rutube.ru/livestream/f79ff24ad16cf5f5eb52994647596d13/index.m3u8?s=ZrXipYUZHniVrAVSwMJWhQ&e=2070623501&scheme=https
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Барс | Иваново
 https://rt-ct-ivan-htlive.cdn.ngenix.net/hls/CH_R01_BARS/variant.m3u8
-#EXTINF:-1 group-title="🏙 Региональные и СНГ",Башкортостан 24 (2) | Башкортостан
-https://s1.gtrkrb.ru/540/b24-540.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Башкортостан 24 | Башкортостан
 https://s45177.cdn.ngenix.net/hls/CH_R02_BASHKORTOSTAN24/variant.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Белгород 24 (2) | Белгородская область
@@ -4448,8 +4396,6 @@ https://rt-vlg-samara-htlive.cdn.ngenix.net/hls/CH_R01_KTVLUCH/variant.m3u8
 https://rt-sth-krdar-htlive.cdn.ngenix.net/hls/CH_R04_OTT_STH_KRDAR_KUBAN24-T/variant.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Кубань 24 | Краснодарский край
 https://rt-sth-krdar-htlive.cdn.ngenix.net/hls/CH_R04_KUBAN24/variant.m3u8
-#EXTINF:-1 group-title="🏙 Региональные и СНГ",Культ Медиа (2) | Астрахань
-http://213.108.175.226/telplushd/index.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Культ Медиа | Астрахань
 https://streaming.astrakhan.ru/telplushd/index.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Лен ТВ 24 (2) | Ленинградская область
@@ -4520,8 +4466,6 @@ http://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R01_OMSKTV/variant.m3u8
 http://catchup.videoline.ru/iriston/index.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Осетия Ирыстон | Владикавказ
 https://rt-sth-vkaz-htlive.cdn.ngenix.net/hls/CH_R01_IRISTON/variant.m3u8
-#EXTINF:-1 group-title="🏙 Региональные и СНГ",ОТВ (2) | Свердловская область
-https://vd.obltv.ru/watch/air.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",ОТВ | Сахалинская область
 https://s14553.cdn.ngenix.net/hls/CH_R65_OTT_DV_SLIN_OTV_SLIN/variant.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",ОТВ | Свердловская область
@@ -4572,8 +4516,6 @@ https://rt-ural-ekt-htlive.cdn.ngenix.net/hls/CH_R04_OTT_RIM_URAL_KURAL/variant.
 https://bl.rutube.ru/livestream/57486bf8e1c01d16a5a939c463867fab/index.m3u8?s=7e16kFowncLriG9eElNY7g&e=2070623512&scheme=https
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Рифей | Пермь
 https://rt-ural-perm-htlive.cdn.ngenix.net/hls/CH_R02_OTT_RENTV_REFEY_PERM/variant.m3u8
-#EXTINF:-1 group-title="🏙 Региональные и СНГ",РТВ | Раменск
-https://e10-ll.facecast.net/rtv/index.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",РТС | Хакасия
 https://rt-sib-abakan-htlive.cdn.ngenix.net/hls/CH_R01_RTS/variant.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Русский Север | Вологодская область
@@ -4686,8 +4628,6 @@ https://rt-vlg-penza-htlive.cdn.ngenix.net/hls/CH_R01_EXPRESS/variant.m3u8
 http://rt-vlg-kzn-htlive.cdn.ngenix.net/hls/CH_R01_EFIR/variant.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Эхо 24 | Свердловская область
 http://stream.novouralsk-news.ru/echotv24/live.m3u8
-#EXTINF:-1 group-title="🏙 Региональные и СНГ",Якутия 24 (2) | Якутия
-https://live-saha.cdnvideo.ru/saha/yak24rtmp/playlist.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Якутия 24 | Якутия
 https://s34351.cdn.ngenix.net/hls/CH_R14_YKT/variant.m3u8
 #EXTINF:-1 group-title="🏙 Региональные и СНГ",Ямал | Ямало-Ненецкий АО
@@ -4780,8 +4720,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/970/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/15278/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",4ever Theater HD UA
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/32108/index.m3u8
-#EXTINF:-1 tvg-logo="https://cdn2-static.ntv.ru/home/promo/24740/5minut_live.jpg" group-title="📺 Разные каналы",5 minut tishiny (1080p)
-https://cdn-dvr.ntv.ru/5_minut_tishiny/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",5 Канал HD UA
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/1030/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",5 Канал UA
@@ -4926,8 +4864,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9022/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/30007/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Anadolu Dernek TR
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6778/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/qKLEGU7.png" group-title="📺 Разные каналы",Angel TV Russian (720p)
-https://janya-digimix.akamaized.net/vglive-sk-955415/russia/ngrp:angelrussia_all/playlist.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Ani orig
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9187/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Animal Planet FHD DE
@@ -4996,10 +4932,6 @@ http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/6720/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6777/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Asharq News HD DE
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31289/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9WcnjQN.png" group-title="📺 Разные каналы",Astrahan 24 (720p)
-https://streaming.astrakhan.ru/astrakhan24/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/w4ys6zm.png" group-title="📺 Разные каналы",Astrahan.Ru TV (480p)
-https://streaming.astrakhan.ru/astrakhanrulivehd/playlist.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",ATG Live SE
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/12086/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",ATR HD UA
@@ -5058,8 +4990,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2370/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/30012/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Baku TV AZ
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/16047/index.m3u8
-#EXTINF:-1 tvg-logo="https://cdn2-static.ntv.ru/home/promo/24740/balabol_vse.jpg" group-title="📺 Разные каналы",Balabol (1080p)
-https://cdn-dvr.ntv.ru/Balabol/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Ballermann TV HD DE
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/31291/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Balticum Auksinis LT
@@ -5210,8 +5140,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/32074/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/7054/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",BollywooD HD
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/239/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/YLQRnXt.png" group-title="📺 Разные каналы",Bollywood HD (576p)
-http://176.118.197.101/Bollywood_HD/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",BollywooD HD orig
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9225/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",BollywooD Indian Classic Movies HD IN
@@ -5258,8 +5186,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9253/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9176/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",BRTV TR
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6776/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/IDotHmQ.png" group-title="📺 Разные каналы",BST (576p)
-https://bsttv.bonus-tv.ru/cdn/bst/playlist.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",BTV HD LT
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/6398/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",BTV LT
@@ -5296,8 +5222,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/32041/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/32009/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Canal+ Sport HD PL
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6098/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/4wmnx1W.png" group-title="📺 Разные каналы",Carousel +4 (720p)
-http://185.37.150.46/Karusel/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Cartoon Network CA
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6508/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Cartoon Network DE
@@ -5344,24 +5268,16 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6513/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9217/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",CGTN Русский HD orig
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9223/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/k8JjFDw.png" group-title="📺 Разные каналы",Channel 10 (Russia) (576i)
-https://bl.rutube.ru/livestream/c9e26bf5c003fd8d477200065ca1a05f/index.m3u8?e=2072611029&s=eqlTXebDP9wSWTZgre6BwQ&scheme=https
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Channel 11 HD IL
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2332/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Channel 11 IL
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/32252/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/OA9hm6e.png" group-title="📺 Разные каналы",Channel 12 (1080p)
-https://12channel.bonus-tv.ru/cdn/12channel/playlist.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Channel 14 FHD IL
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/12242/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Channel 14 HD IL
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/32152/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Channel 24 HD IL
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/12237/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/KPXMa3U.png" group-title="📺 Разные каналы",Channel 5 (Russia) (576p)
-http://31.148.5.241/kanal_5/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/nUSx1jF.png" group-title="📺 Разные каналы",Channel 8 (Russia) (576p)
-http://45.11.139.43:8555/8kanal/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Channel 9 FHD IL
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2331/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Channel 9 HD IL
@@ -5370,8 +5286,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2374/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2369/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Channel I IN
 http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/6633/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/7tNDKHe.png" group-title="📺 Разные каналы",Channel-16 (406p) [Not 24/7]
-http://serv25.vintera.tv:8081/test/k16/playlist.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",CHCH HD CA
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6432/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Cheddar News HD US
@@ -5406,10 +5320,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/32230/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6982/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",CineMax HD RO
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6985/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/qpe8L27.png" group-title="📺 Разные каналы",City Eden AutoGid [Not 24/7]
-https://cityeden.catcast.tv/content/47515/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/38Q5L5W.png" group-title="📺 Разные каналы",City Eden Birma Play [Not 24/7]
-https://cityeden.catcast.tv/content/34364/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/V3MTfyc.png" group-title="📺 Разные каналы",City Eden Sirtaki TV [Not 24/7]
 https://cityeden.catcast.tv/content/46421/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",City TV Toronto HD CA
@@ -5592,8 +5502,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/7354/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6873/index.m3u8
 #EXTINF:0 tvg-rec="7" group-title="📺 Разные каналы",DTX HD PL
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2006/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/JvlO3PU.png" group-title="📺 Разные каналы",Duma TV (720p)
-http://185.23.80.23:8080/DumaTV/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Dunya TV AZ
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2192/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Duo 3 HD EE
@@ -6394,8 +6302,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/32265/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2203/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Magic Adventure HD
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/20141/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/r485aZL.png" group-title="📺 Разные каналы",Magnat (1080p)
-https://s1.tv-nano.com/Magnat_HD_5119705/video.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Magnolia Network CA
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6488/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/C8CCjZK.png" group-title="📺 Разные каналы",Maidan (720p)
@@ -6938,8 +6844,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/6959/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/15193/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Royal Channel HD GE
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/7166/index.m3u8
-#EXTINF:-1 tvg-logo="https://pbs.twimg.com/media/FiHmjBrWIBsN41d.jpg" group-title="📺 Разные каналы",RT Balkan (1080p)
-https://rt-srb.rttv.com/dvr/rtbalkan/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/aeu5zIC.png" group-title="📺 Разные каналы",RT Documentary Russian (1080p)
 https://rt-doc.rttv.com/dvr/rtdru/playlist.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",RT orig
@@ -8044,8 +7948,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/15359/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/2115/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",БСТ HD orig
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9341/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",БСТ orig
-http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9343/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",БТК HD (Белорецк)
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/15371/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="📺 Разные каналы",Бігуді HD UA
@@ -8896,8 +8798,6 @@ http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9002/index.m3u8
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9205/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Ретро orig
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/9152/index.m3u8
-#EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",РЖД ТВ
-http://6fa41fdf.akadatel.com/iptv/STU9BG4REB35BC/9118/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Рибалка FHD UA
 http://ub2vjlzp.virelloso.top/iptv/AMGSMZ4AXBSEPM/1058/index.m3u8
 #EXTINF:0 tvg-rec="3" group-title="📺 Разные каналы",Родное Кино orig
