@@ -3,15 +3,16 @@
     "com.vk.tv",
     "io.gh.reisxd.tizentube.cobalt",
     "ru.iptvremote.android.iptv.pro",
+    "studio.scillarium.ottnavigator",
     "com.raccoon.hdrezkav2",
-    "ru.rutube.app",
-    "ru.ivi.client"
+    "ru.ivi.client.global"
   ],
   "app_labels": [
     "io.gh.reisxd.tizentube.cobalt=YouTube",
     "com.vk.tv=VK Видео",
     "org.xjiop.vkvideoapp=VK Видео",
     "ru.iptvremote.android.iptv.pro=IPTV",
+    "studio.scillarium.ottnavigator=OTT Navigator",
     "com.raccoon.hdrezkav2=HDRezka",
     "ru.rutube.app=Rutube",
     "ru.ivi.client=Иви",
@@ -25,6 +26,7 @@
     "com.cultraview.newfilemanager=banner_filemanager",
     "com.raccoon.hdrezkav2=banner_hdrezka",
     "ru.iptvremote.android.iptv.pro=banner_iptv",
+    "studio.scillarium.ottnavigator=banner_ottnavigator",
     "mobi.zona=banner_zona",
     "org.trackertv.player=banner_kinotrek"
   ],
